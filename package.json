@@ -1,0 +1,29 @@
+{
+  "name": "adventofcode-2022",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "ts-node --watch",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleGough/adventofcode-2022.git"
+  },
+  "author": "Kyle Gough",
+  "license": "MIT",
+  "homepage": "https://github.com/KyleGough/adventofcode-2022#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "prettier": "^2.8.0",
+    "ts-node": "^10.9.1"
+  }
+}
