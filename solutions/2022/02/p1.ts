@@ -1,5 +1,4 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { getPuzzleInput } from '@utilities/getPuzzleInput';
 
 export const day02p1 = (input: string) => {
   const rounds = input.split('\n');
@@ -36,5 +35,5 @@ export const day02p1 = (input: string) => {
   return totalScore;
 };
 
-const input = readFileSync(resolve(__dirname, 'input'), 'utf-8');
+const input = getPuzzleInput(__dirname).input;
 console.log(day02p1(input)); // 13009

@@ -1,5 +1,4 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { getPuzzleInput } from '@utilities/getPuzzleInput';
 
 export const day01p1 = (input: string) => {
   const items = input.split('\n\n');
@@ -7,12 +6,12 @@ export const day01p1 = (input: string) => {
   const calorieList = items.map((item: string) =>
     item
       .split('\n')
-      .map((carlorie) => Number(carlorie))
+      .map((calorie) => Number(calorie))
       .reduce((prev, curr) => prev + curr, 0)
   );
 
   return calorieList.sort((a, b) => b - a)[0];
 };
 
-const input = readFileSync(resolve(__dirname, 'input'), 'utf-8');
+const input = getPuzzleInput(__dirname).input;
 console.log(day01p1(input)); // 70698

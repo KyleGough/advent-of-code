@@ -1,5 +1,4 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { getPuzzleInput } from '@utilities/getPuzzleInput';
 
 export const day03p2 = (input: string) => {
   const rucksacks = input.split('\n');
@@ -25,5 +24,5 @@ export const day03p2 = (input: string) => {
   return sumPriorities;
 };
 
-const input = readFileSync(resolve(__dirname, 'input'), 'utf-8');
+const input = getPuzzleInput(__dirname).input;
 console.log(day03p2(input)); // 2758

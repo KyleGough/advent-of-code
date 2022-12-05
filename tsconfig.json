@@ -3,7 +3,10 @@
     "module": "CommonJS",
     "target": "ES2022",
     "strict": true,
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@utilities/*": ["./utilities/*"]
+    }
   },
   "include": ["./solutions/**/*"]
 }

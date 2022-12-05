@@ -1,5 +1,4 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { getPuzzleInput } from '@utilities/getPuzzleInput';
 
 export const day05p1 = (input: string) => {
   const lines = input.split('\n');
@@ -24,13 +23,11 @@ export const day05p1 = (input: string) => {
     const from = Number(words[3]);
     const to = Number(words[5]);
 
-    for (let j = 0; j < n; j++) {
-      crates[to - 1].push(crates[from - 1].pop() as string);
-    }
+    crates[to - 1].push(...crates[from - 1].splice(-n).reverse());
   }
 
   return crates.map((stack) => stack[stack.length - 1]).join('');
 };
 
-const input = readFileSync(resolve(__dirname, 'input'), 'utf-8');
+const input = getPuzzleInput(__dirname).input;
 console.log(day05p1(input)); // SPFMVDTZT

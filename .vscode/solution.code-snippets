@@ -1,0 +1,18 @@
+{
+  "Solution": {
+    "prefix": ["solution"],
+    "scope": "typescript",
+    "body": [
+      "import { getPuzzleInput } from '@utilities/getPuzzleInput';",
+      "",
+      "export const dayXXpX = (input: string) => {",
+      "  return input;",
+      "};",
+      "",
+      "const input = getPuzzleInput(__dirname).input;",
+      "console.log(dayXXpX(input));",
+      ""
+    ],
+    "description": "Boilerplate for puzzle solution"
+  }
+}

@@ -1,5 +1,4 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { getPuzzleInput } from '@utilities/getPuzzleInput';
 
 export const day04p2 = (input: string) => {
   const lines = input.split('\n');
@@ -21,5 +20,5 @@ export const day04p2 = (input: string) => {
     .reduce((prev, curr) => (curr ? prev + 1 : prev), 0);
 };
 
-const input = readFileSync(resolve(__dirname, 'input'), 'utf-8');
+const input = getPuzzleInput(__dirname).input;
 console.log(day04p2(input)); // 808
