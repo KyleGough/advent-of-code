@@ -1,9 +1,9 @@
 {
-    "compilerOptions": {
-        "module": "CommonJS",
-        "target": "ES2022",
-        "strict": true,
-        "baseUrl": "src",
-    },
-    "include": ["./src/**/*"]
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2022",
+    "strict": true,
+    "baseUrl": "src"
+  },
+  "include": ["./src/**/*"]
 }
