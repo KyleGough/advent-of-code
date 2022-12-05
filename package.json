@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "nodemon --exec ts-node",
-    "build": "tsc"
+    "watch": "nodemon --exec ts-node -r tsconfig-paths/register"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
     "eslint": "^8.28.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.1"
   }
 }
