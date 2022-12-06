@@ -6,8 +6,8 @@ export const day04p2 = (input: string) => {
   const isOverlap = (line: string) => {
     const [first, second] = line.split(',');
 
-    const [firstMin, firstMax] = first.split('-').map((i) => Number(i));
-    const [secondMin, secondMax] = second.split('-').map((i) => Number(i));
+    const [firstMin, firstMax] = first.split('-').map((i) => parseInt(i));
+    const [secondMin, secondMax] = second.split('-').map((i) => parseInt(i));
 
     return (
       (firstMax >= secondMin && firstMin <= secondMin) ||

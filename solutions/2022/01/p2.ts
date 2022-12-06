@@ -6,7 +6,7 @@ export const day01p2 = (input: string) => {
   const calorieList = items.map((item: string) =>
     item
       .split('\n')
-      .map((carlorie) => Number(carlorie))
+      .map((carlorie) => parseInt(carlorie))
       .reduce((prev, curr) => prev + curr, 0)
   );
 

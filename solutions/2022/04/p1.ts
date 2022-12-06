@@ -6,8 +6,8 @@ export const day04p1 = (input: string) => {
   const isFullyContained = (line: string) => {
     const [first, second] = line.split(',');
 
-    const [firstMin, firstMax] = first.split('-').map((i) => Number(i));
-    const [secondMin, secondMax] = second.split('-').map((i) => Number(i));
+    const [firstMin, firstMax] = first.split('-').map((i) => parseInt(i));
+    const [secondMin, secondMax] = second.split('-').map((i) => parseInt(i));
 
     return (
       (firstMin >= secondMin && firstMax <= secondMax) ||
