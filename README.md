@@ -4,8 +4,8 @@
 
 
 <div align=center>
-  <img src="https://img.shields.io/badge/Days-7%2F25-success?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-14/50-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-8%2F25-success?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-16/50-orange?style=flat-square" />
 </div>
 
 <br />
