@@ -1,4 +1,4 @@
-import { getPuzzleInput } from '@utilities/getPuzzleInput';
+import { getPuzzle } from '@utilities/getPuzzle';
 
 class Node {
   name: string;
@@ -75,5 +75,5 @@ export const day07p1 = (input: string) => {
   return sumDirectoryConstraint;
 };
 
-const input = getPuzzleInput(__dirname).input;
+const input = getPuzzle(__dirname).input;
 console.log(day07p1(input)); // 1770595

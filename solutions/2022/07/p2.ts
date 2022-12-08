@@ -1,4 +1,4 @@
-import { getPuzzleInput } from '@utilities/getPuzzleInput';
+import { getPuzzle } from '@utilities/getPuzzle';
 
 class Node {
   name: string;
@@ -95,5 +95,5 @@ export const day07p2 = (input: string) => {
   return findDirectoryToDelete(root, amountToFree).filesize;
 };
 
-const input = getPuzzleInput(__dirname).input;
+const input = getPuzzle(__dirname).input;
 console.log(day07p2(input)); // 2195372

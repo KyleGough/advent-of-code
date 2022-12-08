@@ -1,4 +1,4 @@
-import { getPuzzleInput } from '@utilities/getPuzzleInput';
+import { getPuzzle } from '@utilities/getPuzzle';
 
 export const day02p1 = (input: string) => {
   const rounds = input.split('\n');
@@ -35,5 +35,5 @@ export const day02p1 = (input: string) => {
   return totalScore;
 };
 
-const input = getPuzzleInput(__dirname).input;
+const input = getPuzzle(__dirname).input;
 console.log(day02p1(input)); // 13009

@@ -1,4 +1,4 @@
-import { getPuzzleInput } from '@utilities/getPuzzleInput';
+import { getPuzzle } from '@utilities/getPuzzle';
 
 export const day01p2 = (input: string) => {
   const items = input.split('\n\n');
@@ -15,5 +15,5 @@ export const day01p2 = (input: string) => {
   return c1 + c2 + c3;
 };
 
-const input = getPuzzleInput(__dirname).input;
+const input = getPuzzle(__dirname).input;
 console.log(day01p2(input)); // 206643

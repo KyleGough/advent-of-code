@@ -3,13 +3,13 @@
     "prefix": ["solution"],
     "scope": "typescript",
     "body": [
-      "import { getPuzzleInput } from '@utilities/getPuzzleInput';",
+      "import { getPuzzle } from '@utilities/getPuzzle';",
       "",
       "export const dayXXpX = (input: string) => {",
       "  return input;",
       "};",
       "",
-      "const input = getPuzzleInput(__dirname).input;",
+      "const input = getPuzzle(__dirname).input;",
       "console.log(dayXXpX(input));",
       ""
     ],

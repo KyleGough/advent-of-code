@@ -1,4 +1,4 @@
-import { getPuzzleInput } from '@utilities/getPuzzleInput';
+import { getPuzzle } from '@utilities/getPuzzle';
 
 export const day05p1 = (input: string) => {
   const lines = input.split('\n');
@@ -29,5 +29,5 @@ export const day05p1 = (input: string) => {
   return crates.map((stack) => stack[stack.length - 1]).join('');
 };
 
-const input = getPuzzleInput(__dirname).input;
+const input = getPuzzle(__dirname).input;
 console.log(day05p1(input)); // SPFMVDTZT

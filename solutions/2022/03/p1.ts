@@ -1,4 +1,4 @@
-import { getPuzzleInput } from '@utilities/getPuzzleInput';
+import { getPuzzle } from '@utilities/getPuzzle';
 
 export const day03p1 = (input: string) => {
   const rucksacks = input.split('\n');
@@ -21,5 +21,5 @@ export const day03p1 = (input: string) => {
   return priorities.reduce((prev, curr) => prev + curr, 0);
 };
 
-const input = getPuzzleInput(__dirname).input;
+const input = getPuzzle(__dirname).input;
 console.log(day03p1(input)); // 7553
