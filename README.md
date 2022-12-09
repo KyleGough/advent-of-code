@@ -13,6 +13,15 @@
 
 These are my solutions for [Advent of Code 2022](https://adventofcode.com/2022) written in TypeScript.
 
+
+## 2015
+<div>
+  <img src="https://img.shields.io/badge/Days-2%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-4/50-yellow?style=flat-square" />
+</div>
+<br />
+I am also will be partcipating in previous Advent of Code events at the same time starting with the 2015 event.
+
 ## About
 
 Created by [Eric Wastl](http://was.tl/)
