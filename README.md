@@ -4,8 +4,9 @@
 
 
 <div align=center>
-  <img src="https://img.shields.io/badge/Days-9%2F25-success?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-18/50-orange?style=flat-square" />
+  <img src="https://img.shields.io/github/workflow/status/KyleGough/adventofcode-2022/Unit%20Tests/main?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-9%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-18/50-yellow?style=flat-square" />
 </div>
 
 <br />
