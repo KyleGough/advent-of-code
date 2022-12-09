@@ -5,12 +5,12 @@
     "body": [
       "import { getPuzzle } from '@utilities/getPuzzle';",
       "",
-      "export const dayXXpX = (input: string) => {",
+      "export const day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX = (input: string) => {",
       "  return input;",
       "};",
       "",
       "const input = getPuzzle(__dirname).input;",
-      "console.log(dayXXpX(input));",
+      "console.log(day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX(input));",
       ""
     ],
     "description": "Boilerplate for puzzle solution"
