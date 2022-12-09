@@ -16,11 +16,13 @@
   "license": "MIT",
   "homepage": "https://github.com/KyleGough/adventofcode-2022#readme",
   "dependencies": {
+    "md5": "^2.3.0",
     "path": "^0.12.7",
     "typescript": "^4.9.3"
   },
   "devDependencies": {
     "@types/jest": "^29.2.4",
+    "@types/md5": "^2.3.2",
     "@types/node": "^18.11.10",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
