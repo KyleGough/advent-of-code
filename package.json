@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "watch": "nodemon --exec ts-node -r tsconfig-paths/register",
-    "test": "jest --silent"
+    "test": "jest --silent",
+    "test:2015": "jest --silent solutions/2015",
+    "test:2022": "jest --silent solutions/2022"
   },
   "repository": {
     "type": "git",
