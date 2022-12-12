@@ -1,13 +1,8 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 
-export const day07p1 = (input: string) => {
+export const day07p2 = (input: string) => {
   const instructions = input.split('\n');
-  const signalMap: Record<string, string | number> = {};
-
-  for (let i = 0; i < instructions.length; i++) {
-    const [command, signal] = instructions[i].split(' -> ');
-    signalMap[signal] = command;
-  }
+  let signalMap: Record<string, string | number> = {};
 
   const findValue = (id: string): number => {
     const value = signalMap[id];
@@ -38,8 +33,23 @@ export const day07p1 = (input: string) => {
     return output & 0xffff;
   };
 
+  for (let i = 0; i < instructions.length; i++) {
+    const [command, signal] = instructions[i].split(' -> ');
+    signalMap[signal] = command;
+  }
+
+  const valueA = findValue('a');
+
+  signalMap = {};
+
+  for (let i = 0; i < instructions.length; i++) {
+    const [command, signal] = instructions[i].split(' -> ');
+    signalMap[signal] = command;
+  }
+  signalMap['b'] = valueA;
+
   return findValue('a');
 };
 
-const input = getPuzzle(__dirname).input;
-console.log(day07p1(input)); // 956
+const input = getPuzzle(__dirname).example;
+console.log(day07p2(input)); // 40149
