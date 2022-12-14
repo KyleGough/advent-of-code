@@ -5,8 +5,8 @@
 
 <div align=center>
   <img src="https://img.shields.io/github/workflow/status/KyleGough/advent-of-code/Unit%20Tests/main?label=Tests&logo=Jest&logoColor=red&style=flat-square" />
-  <img src="https://img.shields.io/badge/Days-12%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-24/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-13%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-26/50-yellow?style=flat-square" />
 </div>
 
 <br />
