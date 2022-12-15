@@ -6,12 +6,12 @@
       "import { getPuzzle } from '@utilities/getPuzzle';",
       "import { run } from '@utilities/run';",
       "",
-      "export const day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX = (input: string) => {",
+      "export const day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}${TM_FILENAME_BASE} = (input: string) => {",
       "  return input;",
       "};",
       "",
       "const input = getPuzzle(__dirname).input;",
-      "run(() => day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX(input));",
+      "run(() => day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}${TM_FILENAME_BASE}(input));",
       ""
     ],
     "description": "Boilerplate for puzzle solution"
