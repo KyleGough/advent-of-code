@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day02p2 = (input: string) => {
   const rounds = input.split('\n');
@@ -16,7 +17,6 @@ export const day02p2 = (input: string) => {
   for (let i = 0; i < rounds.length; i++) {
     const [opponent, challenger] = rounds[i].split(' ');
     const opponentNum = choiceScore[opponent];
-    console.log(opponent, challenger);
 
     if (challenger === 'Y') {
       totalScore += opponentNum + 3;
@@ -31,4 +31,4 @@ export const day02p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day02p2(input)); // 10398
+run(() => day02p2(input)); // 10398

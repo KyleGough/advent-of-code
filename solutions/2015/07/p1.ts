@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day07p1 = (input: string) => {
   const instructions = input.split('\n');
@@ -35,11 +36,11 @@ export const day07p1 = (input: string) => {
 
     output &= 0xffff;
     signalMap[id] = output;
-    return output & 0xffff;
+    return output;
   };
 
   return findValue('a');
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day07p1(input)); // 956
+run(() => day07p1(input)); // 956

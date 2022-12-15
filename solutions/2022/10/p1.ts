@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 const nextCycle = (
   cycle: number,
@@ -34,4 +35,4 @@ export const day10p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day10p1(input)); // 13720
+run(() => day10p1(input)); // 13720

@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 class Cell {
   x: number;
@@ -71,4 +72,4 @@ export const day09p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day09p1(input)); // 6339
+run(() => day09p1(input)); // 6339

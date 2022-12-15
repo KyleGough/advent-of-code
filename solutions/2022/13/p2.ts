@@ -1,5 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { compareList } from './day13.helper';
+import { run } from '@utilities/run';
 
 export const day13p2 = (input: string) => {
   const packets = input
@@ -27,4 +28,4 @@ export const day13p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day13p2(input)); // 19493
+run(() => day13p2(input)); // 19493

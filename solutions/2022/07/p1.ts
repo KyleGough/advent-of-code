@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 class Node {
   name: string;
@@ -76,4 +77,4 @@ export const day07p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day07p1(input)); // 1770595
+run(() => day07p1(input)); // 1770595

@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 const markerLength = 14;
 
@@ -11,4 +12,4 @@ export const day06p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day06p2(input)); // 2202
+run(() => day06p2(input)); // 2202

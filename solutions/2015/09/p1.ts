@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import { parseRoute, Graph, getLocationPermutations } from './day09.helper';
 
 export const day09p1 = (input: string) => {
@@ -14,4 +15,4 @@ export const day09p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day09p1(input)); // 251
+run(() => day09p1(input)); // 251

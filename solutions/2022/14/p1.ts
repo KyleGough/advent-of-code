@@ -1,5 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { Cell, getRockPositions, getMaxDepth } from './day14.helper';
+import { run } from '@utilities/run';
 
 export const day14p1 = (input: string) => {
   const rockPaths = input.split('\n').map((i) => i.split(' -> '));
@@ -44,4 +45,4 @@ export const day14p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day14p1(input)); // 805
+run(() => day14p1(input)); // 805

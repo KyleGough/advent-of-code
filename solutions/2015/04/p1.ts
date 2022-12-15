@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import * as md5 from 'md5';
 
 export const day04p1 = (input: string) => {
@@ -13,4 +14,4 @@ export const day04p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day04p1(input)); // 282749
+run(() => day04p1(input)); // 282749

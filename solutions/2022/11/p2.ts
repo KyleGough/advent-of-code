@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import { inspectItem, Monkey, parseMonkey } from './day11.helper';
 
 export const day11p2 = (input: string) => {
@@ -12,7 +13,6 @@ export const day11p2 = (input: string) => {
   for (let round = 0; round < 10000; round++) {
     for (let i = 0; i < monkeys.length; i++) {
       const activeMonkey = monkeys[i];
-      console.log(activeMonkey);
 
       while (activeMonkey.itemList.length) {
         const item = activeMonkey.itemList[0];
@@ -39,10 +39,8 @@ export const day11p2 = (input: string) => {
     .map((i) => i.inspectCount)
     .sort((a, b) => b - a);
 
-  console.log(inspectionCounts);
-
   return inspectionCounts[0] * inspectionCounts[1];
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day11p2(input)); // 12848882750
+run(() => day11p2(input)); // 12848882750

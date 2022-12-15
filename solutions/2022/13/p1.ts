@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import { compareList } from './day13.helper';
 
 const getPairs = (pairs: string) => {
@@ -21,4 +22,4 @@ export const day13p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day13p1(input)); // 6568
+run(() => day13p1(input)); // 6568

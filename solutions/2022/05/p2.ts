@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day05p2 = (input: string) => {
   const lines = input.split('\n');
@@ -30,4 +31,4 @@ export const day05p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day05p2(input)); // ZFSJBPRFP
+run(() => day05p2(input)); // ZFSJBPRFP

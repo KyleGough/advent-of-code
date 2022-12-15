@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day05p1 = (input: string) => {
   const lines = input.split('\n');
@@ -30,4 +31,4 @@ export const day05p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day05p1(input)); // SPFMVDTZT
+run(() => day05p1(input)); // SPFMVDTZT

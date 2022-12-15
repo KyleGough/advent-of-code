@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day10p2 = (input: string) => {
   const instructions = input.split('\n');
@@ -11,7 +12,7 @@ export const day10p2 = (input: string) => {
 
   // Start new pixel row.
   const nextRow = () => {
-    if (cycle % 40 === 0) {
+    if (cycle % 40 === 0 && cycle > 0) {
       display.push(pixelRow);
       pixelRow = [];
     }
@@ -47,4 +48,4 @@ export const day10p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day10p2(input)); // FBURHZCH
+run(() => day10p2(input)); // FBURHZCH

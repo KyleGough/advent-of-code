@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 const encodedStringLengthDiff = (item: string): number => {
   return item.split('').filter((i) => i === '"' || i === '\\').length + 2;
@@ -12,4 +13,4 @@ export const day08p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day08p2(input)); // 2117
+run(() => day08p2(input)); // 2117

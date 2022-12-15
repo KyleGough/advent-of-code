@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import { findNextPassword } from './day11.helper';
 
 export const day11p2 = (input: string) => {
@@ -6,4 +7,4 @@ export const day11p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day11p2(input)); // hxcaabcc
+run(() => day11p2(input)); // hxcaabcc

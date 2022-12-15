@@ -4,13 +4,14 @@
     "scope": "typescript",
     "body": [
       "import { getPuzzle } from '@utilities/getPuzzle';",
+      "import { run } from '@utilities/run';",
       "",
       "export const day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX = (input: string) => {",
       "  return input;",
       "};",
       "",
       "const input = getPuzzle(__dirname).input;",
-      "console.log(day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX(input));",
+      "run(() => day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}pX(input));",
       ""
     ],
     "description": "Boilerplate for puzzle solution"

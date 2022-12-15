@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 const getMemoryLength = (item: string): number => {
   // Strip double quotes.
@@ -29,4 +30,4 @@ export const day08p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day08p1(input)); // 1371
+run(() => day08p1(input)); // 1371

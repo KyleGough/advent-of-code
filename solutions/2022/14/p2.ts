@@ -1,6 +1,7 @@
 // TODO: Optimise
 import { getPuzzle } from '@utilities/getPuzzle';
 import { Cell, getRockPositions, getMaxDepth } from './day14.helper';
+import { run } from '@utilities/run';
 
 const cellToStr = (position: Cell): string => `${position[0]},${position[1]}`;
 
@@ -51,4 +52,4 @@ export const day14p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day14p2(input)); // 25161
+run(() => day14p2(input)); // 25161

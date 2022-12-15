@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 const lineOfSight = (arr: number[], treeHeight: number) => {
   const idx = arr.findIndex((i) => i >= treeHeight);
@@ -39,4 +40,4 @@ export const day08p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day08p2(input)); // 313200
+run(() => day08p2(input)); // 313200

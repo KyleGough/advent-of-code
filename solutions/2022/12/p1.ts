@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import { canClimb, parseHeightMap } from './day12.helper';
 
 export const day12p1 = (input: string) => {
@@ -86,4 +87,4 @@ export const day12p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day12p1(input)); // 391
+run(() => day12p1(input)); // 391

@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day06p1 = (input: string) => {
   const instructions = input.split('\n');
@@ -40,4 +41,4 @@ export const day06p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day06p1(input)); // 400410
+run(() => day06p1(input)); // 400410

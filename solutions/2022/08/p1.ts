@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 
 export const day08p1 = (input: string) => {
   const grid = input
@@ -32,4 +33,4 @@ export const day08p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day08p1(input)); // 1676
+run(() => day08p1(input)); // 1676

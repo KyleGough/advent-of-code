@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { run } from '@utilities/run';
 import { lookAndSay } from './day10.helper';
 
 export const day10p2 = (input: string) => {
@@ -11,4 +12,4 @@ export const day10p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-console.log(day10p2(input)); // 6989950
+run(() => day10p2(input)); // 6989950
