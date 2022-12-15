@@ -4,7 +4,7 @@
 
 
 <div align=center>
-  <img src="https://img.shields.io/github/workflow/status/KyleGough/advent-of-code/Unit%20Tests/main?label=Tests&logo=Jest&logoColor=red&style=flat-square" />
+  <img src="https://img.shields.io/github/actions/workflow/status/KyleGough/advent-of-code/test.yml?branch=main&abel=Tests&logo=Jest&logoColor=red&style=flat-square" />
   <img src="https://img.shields.io/badge/Days-14%2F25-blue?style=flat-square" />
   <img src="https://img.shields.io/badge/Stars-28/50-yellow?style=flat-square" />
 </div>
