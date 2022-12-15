@@ -1,26 +1,33 @@
-export const compareList = (leftList: any, rightList: any): number => {
+type RecursiveList = number[] | RecursiveList[];
+
+export const compareList = (
+  leftList: RecursiveList,
+  rightList: RecursiveList
+): number => {
   const leftSize = leftList.length;
   const rightSize = rightList.length;
 
   for (let i = 0; i < Math.min(leftSize, rightSize); i++) {
-    const isLeftList = typeof leftList[i] !== 'number';
-    const isRightList = typeof rightList[i] !== 'number';
+    const left = leftList[i];
+    const right = rightList[i];
+    const isLeftNum = typeof left === 'number';
+    const isRightNum = typeof right === 'number';
 
-    let comparison: number;
+    let comparison = 0;
 
-    if (isLeftList && isRightList) {
-      comparison = compareList(leftList[i], rightList[i]);
-    } else if (isLeftList) {
-      comparison = compareList(leftList[i], [rightList[i]]);
-    } else if (isRightList) {
-      comparison = compareList([leftList[i]], rightList[i]);
-    } else {
-      if (leftList[i] < rightList[i]) {
+    if (isLeftNum && isRightNum) {
+      if (left < right) {
         return -1;
-      } else if (leftList[i] > rightList[i]) {
+      } else if (left > right) {
         return 1;
       }
       continue;
+    } else if (isLeftNum && !isRightNum) {
+      comparison = compareList([left], right);
+    } else if (!isLeftNum && isRightNum) {
+      comparison = compareList(left, [right]);
+    } else if (!isLeftNum && !isRightNum) {
+      comparison = compareList(left, right);
     }
 
     if (comparison === 1) {
