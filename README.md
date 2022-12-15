@@ -23,8 +23,8 @@ Created by [Eric Wastl](http://was.tl/)
 
 ## 2015
 <div>
-  <img src="https://img.shields.io/badge/Days-9%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-18/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-10%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-20/50-yellow?style=flat-square" />
 </div>
 <br />
 I am also will be partcipating in previous Advent of Code events at the same time starting with the 2015 event.
