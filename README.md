@@ -27,4 +27,4 @@ Created by [Eric Wastl](http://was.tl/)
   <img src="https://img.shields.io/badge/Stars-26/50-yellow?style=flat-square" />
 </div>
 <br />
-I am also will be partcipating in previous Advent of Code events at the same time starting with the 2015 event.
+I also will be partcipating in previous Advent of Code events at the same time starting with the 2015 event.
