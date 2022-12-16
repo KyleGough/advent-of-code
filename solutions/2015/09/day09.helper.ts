@@ -67,29 +67,3 @@ export const parseRoute = (route: string): Route => {
     distance: parseInt(match[3]),
   };
 };
-
-// Heap's method to generate all permutations of locations.
-export const getLocationPermutations = (locations: string[]): string[][] => {
-  const length = locations.length;
-  const permutations = [locations.slice()];
-  const c = new Array(length).fill(0);
-  let i = 1;
-
-  while (i < length) {
-    if (c[i] < i) {
-      const swapIndex = i % 2 && c[i];
-      // Swap locations at index i and k.
-      const tmp = locations[i];
-      locations[i] = locations[swapIndex];
-      locations[swapIndex] = tmp;
-      c[i]++;
-      i = 1;
-      permutations.push(locations.slice());
-    } else {
-      c[i] = 0;
-      i++;
-    }
-  }
-
-  return permutations;
-};
