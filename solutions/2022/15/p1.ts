@@ -1,6 +1,6 @@
 import { getPuzzleWithConfig } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { customInput } from './customInput';
+import { customConfig } from './customConfig';
 import { parseSensor, getInvalidRanges } from './day15.helper';
 
 export const day15p1 = (input: string, testRow: number) => {
@@ -10,5 +10,5 @@ export const day15p1 = (input: string, testRow: number) => {
     .reduce((prev, curr) => prev + curr, 0);
 };
 
-const input = getPuzzleWithConfig(__dirname, customInput).input;
+const input = getPuzzleWithConfig(__dirname, customConfig).input;
 run(() => day15p1(...input)); // 4717631

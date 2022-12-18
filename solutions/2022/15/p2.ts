@@ -1,6 +1,6 @@
 import { getPuzzleWithConfig } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { customInput } from './customInput';
+import { customConfig } from './customConfig';
 import { parseSensor, getInvalidRanges } from './day15.helper';
 
 const getTuningFrequency = (x: number, y: number): number => 4_000_000 * x + y;
@@ -41,5 +41,5 @@ export const day15p2 = (input: string, testRow: number) => {
   }
 };
 
-const input = getPuzzleWithConfig(__dirname, customInput).input;
+const input = getPuzzleWithConfig(__dirname, customConfig).input;
 run(() => day15p2(...input)); // 13197439355220
