@@ -1,25 +1,34 @@
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { resolve } from 'path';
 
-interface CustomData<T> {
+interface PuzzleConfig<T> {
   example: T;
   input: T;
 }
 
-type PuzzleWithCustomInput<T> = Record<string, [string, T]>;
+type PuzzleWithConfig<T> = Record<string, [string, T]>;
 
-export const getPuzzle = (dir: string) => ({
-  example: readFileSync(resolve(dir, 'example.txt'), 'utf-8').trim(),
-  input: readFileSync(resolve(dir, 'input.txt'), 'utf-8').trim(),
-});
+export const getPuzzle = (dir: string) => {
+  const exampleTextPath = resolve(dir, 'example.txt');
+  const inputTextPath = resolve(dir, 'input.txt');
 
-export const getPuzzleWithCustomInput = <T>(
+  return {
+    example: existsSync(exampleTextPath)
+      ? readFileSync(exampleTextPath, 'utf-8').trim()
+      : '',
+    input: existsSync(inputTextPath)
+      ? readFileSync(inputTextPath, 'utf-8').trim()
+      : '',
+  };
+};
+
+export const getPuzzleWithConfig = <T>(
   dir: string,
-  customData: CustomData<T>
-): PuzzleWithCustomInput<T> => {
+  customConfig: PuzzleConfig<T>
+): PuzzleWithConfig<T> => {
   const puzzles = getPuzzle(dir);
   return {
-    example: [puzzles.example, customData.example],
-    input: [puzzles.input, customData.input],
+    example: [puzzles.example, customConfig.example],
+    input: [puzzles.input, customConfig.input],
   };
 };

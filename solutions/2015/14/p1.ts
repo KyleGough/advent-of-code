@@ -1,4 +1,4 @@
-import { getPuzzleWithCustomInput } from '@utilities/getPuzzle';
+import { getPuzzleWithConfig } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { customInput } from './customInput';
 import { Reindeer, parseReindeer } from './day14.helper';
@@ -31,5 +31,5 @@ export const day14p1 = (input: string, timeLimit: number) => {
   return distances.reduce((prev, curr) => Math.max(prev, curr), 0);
 };
 
-const input = getPuzzleWithCustomInput(__dirname, customInput).input;
+const input = getPuzzleWithConfig(__dirname, customInput).input;
 run(() => day14p1(...input)); // 2696

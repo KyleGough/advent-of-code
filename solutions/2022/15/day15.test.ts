@@ -1,9 +1,9 @@
 import { day15p1 } from './p1';
 import { day15p2 } from './p2';
-import { getPuzzleWithCustomInput } from '@utilities/getPuzzle';
+import { getPuzzleWithConfig } from '@utilities/getPuzzle';
 import { customInput } from './customInput';
 
-const { example, input } = getPuzzleWithCustomInput(__dirname, customInput);
+const { example, input } = getPuzzleWithConfig(__dirname, customInput);
 
 describe('Day 15 Puzzle', () => {
   test('Part 1 Example', () => {
