@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { product } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import { inspectItem, Monkey, parseMonkey } from './day11.helper';
 
@@ -7,7 +8,7 @@ export const day11p2 = (input: string) => {
 
   const productDivisible = monkeys
     .map((i) => i.testDivisible)
-    .reduce((prev, curr) => prev * curr, 1);
+    .reduce(product, 1);
 
   // Spectate 10000 rounds of monkey business.
   for (let round = 0; round < 10000; round++) {

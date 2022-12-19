@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 const nextCycle = (
@@ -31,7 +32,7 @@ export const day10p1 = (input: string) => {
     }
   }
 
-  return interestingSignals.reduce((prev, curr) => prev + curr, 0);
+  return interestingSignals.reduce(sum);
 };
 
 const input = getPuzzle(__dirname).input;

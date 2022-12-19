@@ -2,6 +2,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { parseRoute, Graph } from './day09.helper';
 import { permutations } from '@utilities/permutations';
+import { max } from '@utilities/reduce';
 
 export const day09p2 = (input: string) => {
   const routes = input.split('\n').map(parseRoute);
@@ -10,7 +11,7 @@ export const day09p2 = (input: string) => {
   const locationPermutations = permutations(locations);
   const maxDistance = locationPermutations
     .map((i) => graph.getTotalDistance(i))
-    .reduce((prev, curr) => Math.max(prev, curr), 0);
+    .reduce(max);
 
   return maxDistance;
 };

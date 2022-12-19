@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { product } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 const lineOfSight = (arr: number[], treeHeight: number) => {
@@ -29,7 +30,7 @@ export const day08p2 = (input: string) => {
         grid.slice(y + 1, height).map((row) => row[x]),
       ]
         .map((i) => lineOfSight(i, treeHeight))
-        .reduce((prev, curr) => prev * curr, 1);
+        .reduce(product, 1);
 
       if (scenicScore > maxScenicScore) {
         maxScenicScore = scenicScore;

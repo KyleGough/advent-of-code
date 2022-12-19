@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { max } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import {
   parseValve,
@@ -19,9 +20,7 @@ export const day16p1 = (input: string) => {
     getTotalFlow(valveNetwork, ['AA', ...route], timeLimit)
   );
 
-  const maxFlow = flows.reduce((prev, curr) => Math.max(prev, curr), 0);
-
-  return maxFlow;
+  return flows.reduce(max);
 };
 
 const input = getPuzzle(__dirname).input;

@@ -2,6 +2,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { parseRoute, Graph } from './day09.helper';
 import { permutations } from '@utilities/permutations';
+import { min } from '@utilities/reduce';
 
 export const day09p1 = (input: string) => {
   const routes = input.split('\n').map(parseRoute);
@@ -10,7 +11,7 @@ export const day09p1 = (input: string) => {
   const locationPermutations = permutations(locations);
   const minDistance = locationPermutations
     .map((i) => graph.getTotalDistance(i))
-    .reduce((prev, curr) => Math.min(prev, curr), Number.MAX_VALUE);
+    .reduce(min, Number.MAX_VALUE);
 
   return minDistance;
 };

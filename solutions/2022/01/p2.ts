@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 export const day01p2 = (input: string) => {
@@ -8,7 +9,7 @@ export const day01p2 = (input: string) => {
     item
       .split('\n')
       .map((carlorie) => parseInt(carlorie))
-      .reduce((prev, curr) => prev + curr, 0)
+      .reduce(sum)
   );
 
   const [c1, c2, c3] = calorieList.sort((a, b) => b - a).splice(0, 3);

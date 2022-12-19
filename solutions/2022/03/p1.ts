@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 export const day03p1 = (input: string) => {
@@ -19,7 +20,7 @@ export const day03p1 = (input: string) => {
 
   const priorities = rucksacks.map(getWrongItem).map(getPriority);
 
-  return priorities.reduce((prev, curr) => prev + curr, 0);
+  return priorities.reduce(sum);
 };
 
 const input = getPuzzle(__dirname).input;

@@ -1,3 +1,5 @@
+import { sum } from '@utilities/reduce';
+
 export const parseIngredient = (input: string): number[] => {
   const matches = input.match(
     /.+ (?<cap>-?\d+),.+ (?<dur>-?\d+),.+ (?<fla>-?\d+),.+ (?<tex>-?\d+), .+ (?<cal>-?\d+)/
@@ -42,9 +44,7 @@ export const cookieScore = (amounts: number[], ingredients: number[][]) => {
   for (let i = 0; i < 4; i++) {
     score *= Math.max(
       0,
-      absoluteAmounts
-        .map((amount) => amount[i])
-        .reduce((prev, curr) => prev + curr, 0)
+      absoluteAmounts.map((amount) => amount[i]).reduce(sum)
     );
   }
 

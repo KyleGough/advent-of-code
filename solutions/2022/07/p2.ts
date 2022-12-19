@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 class Node {
@@ -80,7 +81,7 @@ export const day07p2 = (input: string) => {
     if (node.isDirectory) {
       const directorySize = node.children
         .map((child) => calculateDirectorySize(child))
-        .reduce((prev, curr) => prev + curr, 0);
+        .reduce(sum);
       node.filesize = directorySize;
       return directorySize;
     } else {

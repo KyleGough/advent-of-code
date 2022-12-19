@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 const encodedStringLengthDiff = (item: string): number => {
@@ -7,9 +8,7 @@ const encodedStringLengthDiff = (item: string): number => {
 
 export const day08p2 = (input: string) => {
   const items = input.split('\n');
-  return items
-    .map(encodedStringLengthDiff)
-    .reduce((prev, curr) => prev + curr, 0);
+  return items.map(encodedStringLengthDiff).reduce(sum);
 };
 
 const input = getPuzzle(__dirname).input;

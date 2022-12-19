@@ -1,5 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
+import { product, sum } from '@utilities/reduce';
 
 export const day02p2 = (input: string) => {
   return input
@@ -9,10 +10,10 @@ export const day02p2 = (input: string) => {
         .split('x')
         .map((i) => parseInt(i))
         .sort((a, b) => a - b);
-      const volume = dimensions.reduce((prev, curr) => prev * curr, 1);
+      const volume = dimensions.reduce(product, 1);
       return volume + 2 * dimensions[0] + 2 * dimensions[1];
     })
-    .reduce((prev, curr) => prev + curr, 0);
+    .reduce(sum);
 };
 
 const input = getPuzzle(__dirname).input;

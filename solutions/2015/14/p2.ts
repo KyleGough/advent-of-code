@@ -1,4 +1,5 @@
 import { getPuzzleWithConfig } from '@utilities/getPuzzle';
+import { max } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import { customConfig } from './customConfig';
 import { Reindeer, parseReindeer } from './day14.helper';
@@ -37,11 +38,7 @@ const getMaxDistances = (distances: number[][]): number[] => {
   const maxDistances: number[] = [];
 
   for (let i = 0; i < length; i++) {
-    maxDistances.push(
-      distances
-        .map((distance) => distance[i])
-        .reduce((prev, curr) => Math.max(prev, curr), 0)
-    );
+    maxDistances.push(distances.map((distance) => distance[i]).reduce(max));
   }
 
   return maxDistances;
@@ -71,7 +68,7 @@ export const day14p2 = (input: string, timeLimit: number) => {
     getReindeerPoints(reindeer, maxDistances, timeLimit)
   );
 
-  return reindeerPoints.reduce((prev, curr) => Math.max(prev, curr), 0);
+  return reindeerPoints.reduce(max);
 };
 
 const input = getPuzzleWithConfig(__dirname, customConfig).example;

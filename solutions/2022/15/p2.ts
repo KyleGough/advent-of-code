@@ -1,4 +1,5 @@
 import { getPuzzleWithConfig } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import { customConfig } from './customConfig';
 import { parseSensor, getInvalidRanges } from './day15.helper';
@@ -32,7 +33,7 @@ export const day15p2 = (input: string, testRow: number) => {
 
     const invalidPositionCount = invalidRanges
       .map((range) => range[1] - range[0] + 1)
-      .reduce((prev, curr) => prev + curr, 0);
+      .reduce(sum);
 
     if (invalidPositionCount < maxSize + 1) {
       const x = getBeaconXPosition(invalidRanges, maxSize);

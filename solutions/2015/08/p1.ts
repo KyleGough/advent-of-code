@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 const getMemoryLength = (item: string): number => {
@@ -19,12 +20,8 @@ const getMemoryLength = (item: string): number => {
 
 export const day08p1 = (input: string) => {
   const items = input.split('\n');
-  const totalLiteralLength = items
-    .map((i) => i.length)
-    .reduce((prev, curr) => prev + curr, 0);
-  const totalInMemoryLength = items
-    .map(getMemoryLength)
-    .reduce((prev, curr) => prev + curr, 0);
+  const totalLiteralLength = items.map((i) => i.length).reduce(sum);
+  const totalInMemoryLength = items.map(getMemoryLength).reduce(sum);
 
   return totalLiteralLength - totalInMemoryLength;
 };

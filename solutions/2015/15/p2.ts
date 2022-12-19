@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { max } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import {
   parseIngredient,
@@ -25,7 +26,7 @@ export const day15p2 = (input: string) => {
   );
 
   const scores = validAmounts.map((i) => cookieScore(i, ingredients));
-  return scores.reduce((prev, curr) => Math.max(prev, curr), 0);
+  return scores.reduce(max);
 };
 
 const input = getPuzzle(__dirname).input;

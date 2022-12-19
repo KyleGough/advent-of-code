@@ -2,6 +2,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { permutations } from '@utilities/permutations';
 import { getArrangementMap, getPermutationHappiness } from './day13.helper';
+import { max } from '@utilities/reduce';
 
 export const day13p2 = (input: string) => {
   const arrangementMap = getArrangementMap(input);
@@ -20,7 +21,7 @@ export const day13p2 = (input: string) => {
 
   return peoplePermutations
     .map((i) => getPermutationHappiness(arrangementMap, i))
-    .reduce((prev, curr) => Math.max(prev, curr), 0);
+    .reduce(max);
 };
 
 const input = getPuzzle(__dirname).input;

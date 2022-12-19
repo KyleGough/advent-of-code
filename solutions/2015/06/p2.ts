@@ -1,4 +1,5 @@
 import { getPuzzle } from '@utilities/getPuzzle';
+import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
 export const day06p2 = (input: string) => {
@@ -35,9 +36,7 @@ export const day06p2 = (input: string) => {
     }
   }
 
-  return grid
-    .map((row) => row.reduce((prev, curr) => prev + curr, 0))
-    .reduce((prev, curr) => prev + curr, 0);
+  return grid.map((row) => row.reduce(sum)).reduce(sum);
 };
 
 const input = getPuzzle(__dirname).input;
