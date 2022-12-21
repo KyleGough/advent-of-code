@@ -5,7 +5,6 @@ import { parseBlueprint, countGeodes } from './day19.helper';
 
 export const day19p2 = (input: string) => {
   const blueprints = input.split('\n').slice(0, 3).map(parseBlueprint);
-  console.log(blueprints.length);
   const geodeCounts = blueprints.map((i) => countGeodes(i, 32));
   return geodeCounts.reduce(product);
 };
