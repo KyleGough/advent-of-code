@@ -14,10 +14,10 @@ export const getPuzzle = (dir: string) => {
 
   return {
     example: existsSync(exampleTextPath)
-      ? readFileSync(exampleTextPath, 'utf-8').trim()
+      ? readFileSync(exampleTextPath, 'utf-8')
       : '',
     input: existsSync(inputTextPath)
-      ? readFileSync(inputTextPath, 'utf-8').trim()
+      ? readFileSync(inputTextPath, 'utf-8')
       : '',
   };
 };

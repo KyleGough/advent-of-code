@@ -8,7 +8,6 @@ export const day21p2 = (input: string) => {
   const itemCombos = getItemCombos();
   const losingFights = itemCombos.filter((i) => !fightBoss(boss, i));
   const losingCosts = losingFights.map((i) => i.cost);
-  console.log(losingCosts);
   return losingCosts.reduce(max);
 };
 
