@@ -16,7 +16,7 @@ export const day18p1 = (input: string) => {
 
       // If adjacent positions next to droplet are occupied, modify surface area.
       for (let k = 0; k < analysedDroplets.length; k++) {
-        if (analysedDroplets[k].equals(checkPosition)) {
+        if (analysedDroplets[k].equalPosition(checkPosition)) {
           analysedDroplets[k].surfaceArea--;
           droplet.surfaceArea--;
         }

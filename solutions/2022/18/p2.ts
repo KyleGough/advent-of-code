@@ -20,7 +20,7 @@ const getBoundingBox = (droplets: Droplet[]): BoundingBox => {
   const dropletsY = droplets.map((droplets) => droplets.y);
   const minY = dropletsY.reduce(min, Number.MAX_VALUE) - 1;
   const maxY = dropletsY.reduce(max) + 1;
-  const dropletsZ = droplets.map((droplets) => droplets.x);
+  const dropletsZ = droplets.map((droplets) => droplets.z);
   const minZ = dropletsZ.reduce(min, Number.MAX_VALUE) - 1;
   const maxZ = dropletsZ.reduce(max) + 1;
 
@@ -46,7 +46,7 @@ const isDropletContained = (
   droplets: Droplet[]
 ): boolean => {
   for (let k = 0; k < droplets.length; k++) {
-    if (droplets[k].equals(position)) {
+    if (droplets[k].equalPosition(position)) {
       return true;
     }
   }

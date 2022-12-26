@@ -13,7 +13,7 @@ describe('Day 18 Puzzle', () => {
     expect(day18p1(input)).toBe(4400);
   });
 
-  test.skip('Part 2 Example', () => {
+  test('Part 2 Example', () => {
     expect(day18p2(example)).toBe(58);
   });
 

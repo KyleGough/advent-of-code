@@ -19,7 +19,7 @@ export class Droplet {
     );
   }
 
-  equals(droplet: Droplet) {
+  equalPosition(droplet: Droplet) {
     return this.x === droplet.x && this.y === droplet.y && this.z === droplet.z;
   }
 }
