@@ -4,6 +4,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 
 const { example, input } = getPuzzle(__dirname);
 
+// Tests are skipped for client and CI performance.
 describe('Day 04 Puzzle', () => {
   test.skip('Part 1 Example', () => {
     expect(day04p1(example)).toBe(609_043);

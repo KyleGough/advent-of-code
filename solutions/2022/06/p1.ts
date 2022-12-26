@@ -1,14 +1,9 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-
-const markerLength = 4;
+import { getStartMarkerIndex } from './day06.helper';
 
 export const day06p1 = (input: string) => {
-  for (let i = 0; i <= input.length - markerLength; i++) {
-    if (new Set(input.slice(i, i + markerLength)).size === markerLength) {
-      return i + markerLength;
-    }
-  }
+  return getStartMarkerIndex(input, 4);
 };
 
 const input = getPuzzle(__dirname).input;

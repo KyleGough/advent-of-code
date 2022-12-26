@@ -5,7 +5,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 const { example, input } = getPuzzle(__dirname);
 
 describe('Day 05 Puzzle', () => {
-  test.skip('Part 1 Example', () => {
+  test('Part 1 Example', () => {
     expect(day05p1(example)).toBe('CMZ');
   });
 
@@ -13,7 +13,7 @@ describe('Day 05 Puzzle', () => {
     expect(day05p1(input)).toBe('SPFMVDTZT');
   });
 
-  test.skip('Part 2 Example', () => {
+  test('Part 2 Example', () => {
     expect(day05p2(example)).toBe('MCD');
   });
 

@@ -33,10 +33,10 @@ const isOutOfBounds = (
 ): boolean => {
   return (
     position.x < boundingBox.minX ||
-    position.x > boundingBox.maxX ||
     position.y < boundingBox.minY ||
-    position.y > boundingBox.maxY ||
     position.z < boundingBox.minZ ||
+    position.x > boundingBox.maxX ||
+    position.y > boundingBox.maxY ||
     position.z > boundingBox.maxZ
   );
 };

@@ -18,8 +18,7 @@ export const day13p2 = (input: string) => {
   for (let i = 0; i < packets.length; i++) {
     if (JSON.stringify(packets[i]) === JSON.stringify([[2]])) {
       firstMarkerIndex = i + 1;
-    }
-    if (JSON.stringify(packets[i]) === JSON.stringify([[6]])) {
+    } else if (JSON.stringify(packets[i]) === JSON.stringify([[6]])) {
       secondMarkerIndex = i + 1;
     }
   }
