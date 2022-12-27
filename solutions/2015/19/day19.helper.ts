@@ -16,6 +16,10 @@ export const replacementStep = (
     const matchRegex = new RegExp(`${match}`, 'g');
     const matches = molecule.matchAll(matchRegex);
 
+    if (replace === 'e' && match !== molecule) {
+      continue;
+    }
+
     let result = matches.next();
     while (!result.done) {
       const idx = result.value.index ?? 0;
