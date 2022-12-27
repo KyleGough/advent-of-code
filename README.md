@@ -11,7 +11,7 @@
 
 <br />
 
-These are my solutions for [Advent of Code 2022](https://adventofcode.com/2022) written in TypeScript.
+These are my solutions for [Advent of Code](https://adventofcode.com) for 2022 and 2015, written in TypeScript.
 
 ## About
 
@@ -21,8 +21,8 @@ Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcod
 
 ## 2015
 <div>
-  <img src="https://img.shields.io/badge/Days-24%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-47/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-25%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-50/50-yellow?style=flat-square" />
 </div>
 <br />
 I also will be partcipating in previous Advent of Code events at the same time starting with the 2015 event.
