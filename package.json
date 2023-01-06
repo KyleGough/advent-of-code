@@ -6,6 +6,7 @@
     "watch": "nodemon --exec ts-node -r tsconfig-paths/register",
     "test": "jest",
     "test:2015": "jest solutions/2015",
+    "test:2016": "jest solutions/2016",
     "test:2022": "jest solutions/2022",
     "lint": "eslint ."
   },
