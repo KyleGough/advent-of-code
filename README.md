@@ -21,8 +21,8 @@ Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcod
 
 ## 2016
 <div>
-  <img src="https://img.shields.io/badge/Days-14%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-28/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-15%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-30/50-yellow?style=flat-square" />
 </div>
 
 ## 2015
