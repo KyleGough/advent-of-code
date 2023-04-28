@@ -15,6 +15,13 @@ const shell = (n: number): number => {
 
 export const day03p1 = (input: string | number) => {
   const n = typeof input === 'string' ? parseInt(input) : input;
+
+  if (n === 1) {
+    return 0;
+  } else if (n <= 9) {
+    return n % 2 === 0 ? 1 : 2;
+  }
+
   const shellIndex = shell(n);
   const shellCount = (shellIndex + 1) / 2;
   const maxOddSquare = Math.pow(shellIndex, 2);
