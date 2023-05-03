@@ -28,8 +28,8 @@ Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcod
 ## 2017
 
 <div>
-  <img src="https://img.shields.io/badge/Days-8%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-16/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-9%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-18/50-yellow?style=flat-square" />
 </div>
 
 ## 2016
