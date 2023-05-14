@@ -27,13 +27,10 @@ const knot = (
   return list;
 };
 
-export const knotHash = (
-  lengths: number[],
-  pos: number,
-  skipSize: number,
-  listLength: number,
-  rounds = 1
-): number[] => {
+export const knotHash = (lengths: number[], rounds = 1): number[] => {
+  let pos = 0;
+  let skipSize = 0;
+  const listLength = 256;
   let list: number[] = [];
 
   // Initialise list.
@@ -51,4 +48,18 @@ export const knotHash = (
   }
 
   return list;
+};
+
+export const denseHash = (lengths: number[], rounds = 64): string => {
+  const sparseHash = knotHash(lengths, rounds);
+  const denseHash = [];
+
+  for (let i = 0; i < 16; i++) {
+    const section = sparseHash.slice(i * 16, i * 16 + 16);
+    const xorSection = section.reduce((prev, curr) => prev ^ curr);
+    const hex = xorSection.toString(16).padStart(2, '0');
+    denseHash.push(hex);
+  }
+
+  return denseHash.join('');
 };
