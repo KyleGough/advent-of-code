@@ -4,7 +4,7 @@ export class Registers {
 
   constructor(registers = {}) {
     this.registers = registers;
-    this.registerNames = new Set<string>(Object.keys(this.registers));
+    this.registerNames = new Set(Object.keys(this.registers));
   }
 
   hasRegister(register: string): boolean {
