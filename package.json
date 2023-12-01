@@ -9,6 +9,7 @@
     "test:2016": "jest solutions/2016",
     "test:2017": "jest solutions/2017",
     "test:2022": "jest solutions/2022",
+    "test:2023": "jest solutions/2023",
     "lint": "eslint ."
   },
   "repository": {

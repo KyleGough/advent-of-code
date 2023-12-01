@@ -10,11 +10,15 @@ type PuzzleWithConfig<T> = Record<string, [string, T]>;
 
 export const getPuzzle = (dir: string) => {
   const exampleTextPath = resolve(dir, 'example.txt');
+  const exampleTextPath2 = resolve(dir, 'example2.txt');
   const inputTextPath = resolve(dir, 'input.txt');
 
   return {
     example: existsSync(exampleTextPath)
       ? readFileSync(exampleTextPath, 'utf-8')
+      : '',
+    example2: existsSync(exampleTextPath2)
+      ? readFileSync(exampleTextPath2, 'utf-8')
       : '',
     input: existsSync(inputTextPath)
       ? readFileSync(inputTextPath, 'utf-8')

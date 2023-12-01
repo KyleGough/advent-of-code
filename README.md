@@ -4,8 +4,8 @@
 
 <div align=center>
   <img src="https://img.shields.io/github/actions/workflow/status/KyleGough/advent-of-code/test.yml?branch=main&label=Tests&logo=Jest&logoColor=red&style=flat-square" />
-  <img src="https://img.shields.io/badge/Days-25%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-50/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-1%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-2/50-yellow?style=flat-square" />
 </div>
 
 <br />
@@ -17,6 +17,13 @@ These are my solutions for [Advent of Code](https://adventofcode.com) written in
 > Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.
 
 Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcode.com/2022/about)
+
+## 2023
+
+<div>
+  <img src="https://img.shields.io/badge/Days-1%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-2/50-yellow?style=flat-square" />
+</div>
 
 ## 2022
 
