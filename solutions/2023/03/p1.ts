@@ -6,7 +6,7 @@ interface State {
   symbol: boolean;
 }
 
-export const day01p1 = (input: string) => {
+export const day03p1 = (input: string) => {
   const grid = input.split('\n').map((i) => `${i}.`.split(''));
   const width = grid[0].length;
   const height = grid.length;
@@ -66,4 +66,4 @@ const isSymbol = (input: string): boolean => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day01p1(input)); // 554003
+run(() => day03p1(input)); // 554003

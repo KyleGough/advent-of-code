@@ -7,7 +7,7 @@ interface State {
   symbolList: string[];
 }
 
-export const day01p2 = (input: string) => {
+export const day03p2 = (input: string) => {
   const grid = input.split('\n').map((i) => `${i}.`.split(''));
   const width = grid[0].length;
   const height = grid.length;
@@ -86,4 +86,4 @@ const getTotalGearRatio = (map: Record<string, number[]>): number => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day01p2(input)); // 87263515
+run(() => day03p2(input)); // 87263515

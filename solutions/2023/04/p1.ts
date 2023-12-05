@@ -3,7 +3,7 @@ import { sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import { getCardMatches } from './day04.helper';
 
-export const day01p1 = (input: string) => {
+export const day04p1 = (input: string) => {
   return input.split('\n').map(getCardMatches).map(getMatchScore).reduce(sum);
 };
 
@@ -12,4 +12,4 @@ const getMatchScore = (matches: number): number => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day01p1(input)); // 20667
+run(() => day04p1(input)); // 20667

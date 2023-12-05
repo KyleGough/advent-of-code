@@ -2,7 +2,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 import { max, sum } from '@utilities/reduce';
 import { run } from '@utilities/run';
 
-export const day01p1 = (input: string) => {
+export const day02p1 = (input: string) => {
   return input.split('\n').map(parseGame).reduce(sum);
 };
 
@@ -41,4 +41,4 @@ const parseGame = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day01p1(input)); // 2528
+run(() => day02p1(input)); // 2528

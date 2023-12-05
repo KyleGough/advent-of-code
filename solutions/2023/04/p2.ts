@@ -2,7 +2,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { getCardMatches } from './day04.helper';
 
-export const day01p2 = (input: string) => {
+export const day04p2 = (input: string) => {
   const matches = input.split('\n').map(getCardMatches);
   let queue = [];
   let totalCardCount = 0;
@@ -39,4 +39,4 @@ export const day01p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day01p2(input)); // 5833065
+run(() => day04p2(input)); // 5833065
