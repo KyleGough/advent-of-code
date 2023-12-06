@@ -1,14 +1,14 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { min } from '@utilities/reduce';
 import { run } from '@utilities/run';
-import { getSeeds, parseTriplet } from './day05.helper';
+import { matchNumbers } from '@utilities/stringMatch';
 
 export const day05p1 = (input: string) => {
   const almanac = input.split('\n\n');
-  const seeds = getSeeds(almanac[0]);
+  const seeds = matchNumbers(almanac[0]);
   const almanacMaps = almanac
     .slice(1)
-    .map((i) => i.split('\n').slice(1).map(parseTriplet));
+    .map((i) => i.split('\n').slice(1).map(matchNumbers));
 
   return seeds.map((i) => getLocation(i, almanacMaps)).reduce(min);
 };

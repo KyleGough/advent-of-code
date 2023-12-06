@@ -1,9 +1,9 @@
+import { matchNumbers } from '@utilities/stringMatch';
+
 export const getCardMatches = (line: string): number => {
   const data = line.split(':')[1];
-  const winStr = data.split('|')[0].matchAll(/\d+/g);
-  const numStr = data.split('|')[1].matchAll(/\d+/g);
-  const winningNumbers = [...winStr].map((i) => parseInt(i[0]));
-  const numbers = [...numStr].map((i) => parseInt(i[0]));
+  const winningNumbers = matchNumbers(data.split('|')[0]);
+  const numbers = matchNumbers(data.split('|')[1]);
 
   return (
     winningNumbers.length +
