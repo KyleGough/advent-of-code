@@ -1,4 +1,4 @@
-import { matchNumbers } from '@utilities/stringMatch';
+import { matchNumbers } from '@utilities/string';
 
 export const getCardMatches = (line: string): number => {
   const data = line.split(':')[1];

@@ -11,7 +11,7 @@
       "};",
       "",
       "const input = getPuzzle(__dirname).input;",
-      "run(() => day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}${TM_FILENAME_BASE}(input));",
+      "run(() => day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}${TM_FILENAME_BASE}(input)); // TODO",
       ""
     ],
     "description": "Boilerplate for puzzle solution"

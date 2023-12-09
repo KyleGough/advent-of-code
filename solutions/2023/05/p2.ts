@@ -1,6 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { matchNumbers } from '@utilities/stringMatch';
+import { matchNumbers } from '@utilities/string';
 
 export const day05p2 = (input: string) => {
   const almanac = input.split('\n\n');

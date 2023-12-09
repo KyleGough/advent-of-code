@@ -2,7 +2,7 @@ import { getPuzzle } from '@utilities/getPuzzle';
 import { trueCount } from '@utilities/reduce';
 import { run } from '@utilities/run';
 import { trianglePossible } from './day03.helper';
-import { matchNumbers } from '@utilities/stringMatch';
+import { matchNumbers } from '@utilities/string';
 
 export const day03p1 = (input: string) => {
   const lengths = input.split('\n').map(matchNumbers);

@@ -1,7 +1,7 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { min } from '@utilities/reduce';
 import { run } from '@utilities/run';
-import { matchNumbers } from '@utilities/stringMatch';
+import { matchNumbers } from '@utilities/string';
 
 export const day05p1 = (input: string) => {
   const almanac = input.split('\n\n');

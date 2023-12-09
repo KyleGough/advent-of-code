@@ -1,6 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { matchDisjointNumber } from '@utilities/stringMatch';
+import { matchDisjointNumber } from '@utilities/string';
 import { getWinMethodCount } from './day06.helper';
 
 export const day06p2 = (input: string) => {
