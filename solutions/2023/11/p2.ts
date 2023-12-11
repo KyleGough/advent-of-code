@@ -63,5 +63,5 @@ const sumPairLength = (
   return totalLength;
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day11p2(input)); // 553224415344
