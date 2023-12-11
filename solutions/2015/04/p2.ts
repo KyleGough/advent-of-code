@@ -13,5 +13,5 @@ export const day04p2 = (input: string) => {
   }
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day04p2(input)); // 9962624

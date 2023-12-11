@@ -9,5 +9,5 @@ export const day19p2 = (input: string) => {
   return geodeCounts.reduce(product);
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day19p2(input)); // 5394

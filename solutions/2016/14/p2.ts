@@ -6,5 +6,5 @@ export const day14p2 = (input: string) => {
   return getPadKeyIndex(input, 64, 2017);
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day14p2(input)); // 22696

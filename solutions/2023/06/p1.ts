@@ -14,5 +14,5 @@ export const day06p1 = (input: string) => {
   return product;
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day06p1(input)); // 2374848

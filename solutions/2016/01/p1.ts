@@ -34,5 +34,5 @@ export const day01p1 = (input: string) => {
   return Math.abs(x) + Math.abs(y);
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day01p1(input)); // 271
