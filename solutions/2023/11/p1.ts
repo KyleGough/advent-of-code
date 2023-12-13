@@ -1,7 +1,8 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { trueCount } from '@utilities/reduce';
 import { run } from '@utilities/run';
-import { Coord, getGalaxyCoords, transpose, Universe } from './day11.helper';
+import { transpose } from '@utilities/array';
+import { Coord, getGalaxyCoords, Universe } from './day11.helper';
 
 export const day11p1 = (input: string) => {
   const grid = input.split('\n').map((i) => i.split('').map((j) => j === '#'));

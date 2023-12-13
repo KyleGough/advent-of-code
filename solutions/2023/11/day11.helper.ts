@@ -5,17 +5,6 @@ export interface Coord {
   y: number;
 }
 
-export const transpose = (grid: Universe): Universe => {
-  const width = grid[0].length;
-  const transposedGrid = [];
-
-  for (let i = 0; i < width; i++) {
-    transposedGrid.push(grid.map((row) => row[i]));
-  }
-
-  return transposedGrid;
-};
-
 export const getGalaxyCoords = (grid: Universe): Coord[] => {
   const width = grid[0].length;
   const height = grid.length;

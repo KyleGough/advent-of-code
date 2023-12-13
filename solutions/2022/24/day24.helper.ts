@@ -1,3 +1,5 @@
+import { transpose } from '@utilities/array';
+
 type Grid = boolean[][];
 
 interface StaticData {
@@ -6,20 +8,6 @@ interface StaticData {
   width: number;
   height: number;
 }
-
-// Transpose grid.
-const transpose = <T>(arr: T[][]): T[][] => {
-  const transposedArr: T[][] = [];
-  for (let x = 0; x < arr[0].length; x++) {
-    const row = [];
-    for (let y = 0; y < arr.length; y++) {
-      row.push(arr[y][x]);
-    }
-    transposedArr.push(row);
-  }
-
-  return transposedArr;
-};
 
 // Parse up and down blizzard directions.
 export const parseVertical = (input: string[][]) => {
