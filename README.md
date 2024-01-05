@@ -4,8 +4,8 @@
 
 <div align=center>
   <img src="https://img.shields.io/github/actions/workflow/status/KyleGough/advent-of-code/test.yml?branch=main&label=Tests&logo=Jest&logoColor=red&style=flat-square" />
-  <img src="https://img.shields.io/badge/Days-21%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-44/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-22%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-45/50-yellow?style=flat-square" />
 </div>
 
 <br />
@@ -21,8 +21,8 @@ Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcod
 ## 2023
 
 <div>
-  <img src="https://img.shields.io/badge/Days-21%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-44/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-22%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-45/50-yellow?style=flat-square" />
 </div>
 
 ## 2022
