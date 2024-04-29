@@ -17,8 +17,8 @@ describe('Day 14 Puzzle', () => {
   });
 
   test('Part 2 Example', () => {
-    expect(day14p2('51589')).toBe(9);
     expect(day14p2('01245')).toBe(5);
+    expect(day14p2('51589')).toBe(9);
     expect(day14p2('92510')).toBe(18);
     expect(day14p2('59414')).toBe(2018);
   });

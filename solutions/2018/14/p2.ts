@@ -21,9 +21,13 @@ export const day14p2 = (input: string) => {
     elfA = (elfA + 1 + recipes[elfA]) % recipes.length;
     elfB = (elfB + 1 + recipes[elfB]) % recipes.length;
 
-    const endIndex = (newRecipes.length === 2 ? -1 : 0) - input.length;
-    const endRecipes = recipes.slice(endIndex);
-    if (endRecipes.join('').includes(input)) {
+    let endIndex = (newRecipes.length === 2 ? -1 : 0) - input.length;
+    const endRecipes = recipes.slice(endIndex).join('');
+    if (endRecipes.slice(1).includes(input)) {
+      endIndex += 1;
+    }
+
+    if (endRecipes.includes(input)) {
       return recipes.length + endIndex;
     }
   }
