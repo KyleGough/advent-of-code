@@ -2,7 +2,7 @@ import { day23p1 } from './p1';
 import { day23p2 } from './p2';
 import { getPuzzle } from '@utilities/getPuzzle';
 
-const { example, input } = getPuzzle(__dirname);
+const { example, example2, input } = getPuzzle(__dirname);
 
 describe('Day 23 Puzzle', () => {
   test('Part 1 Example', () => {
@@ -14,10 +14,10 @@ describe('Day 23 Puzzle', () => {
   });
 
   test.skip('Part 2 Example', () => {
-    expect(day23p2(example)).toBe(0);
+    expect(day23p2(example2)).toBe(36);
   });
 
   test.skip('Part 2 Input', () => {
-    expect(day23p2(input)).toBe(0);
+    expect(day23p2(input)).toBe(47_141_479);
   });
 });
