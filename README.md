@@ -36,7 +36,7 @@ Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcod
 
 <div>
   <img src="https://img.shields.io/badge/Days-19%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-38/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-39/50-yellow?style=flat-square" />
 </div>
 
 ## 2017
