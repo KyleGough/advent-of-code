@@ -18,6 +18,6 @@ describe('Day 20 Puzzle', () => {
   });
 
   test.skip('Part 2 Input', () => {
-    expect(day20p2(input)).toBe(0);
+    expect(day20p2(input)).toBe(8492);
   });
 });
