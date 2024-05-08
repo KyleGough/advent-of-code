@@ -3,7 +3,7 @@ const parent = (n: number) => ((n + 1) >>> 1) - 1;
 const left = (n: number) => (n << 1) + 1;
 const right = (n: number) => (n + 1) << 1;
 
-type ComparisonFn<T> = (a: T, b: T) => number;
+type ComparisonFn<T> = (a: T, b: T) => boolean;
 
 export class PriorityQueue<T> {
   _heap: T[];

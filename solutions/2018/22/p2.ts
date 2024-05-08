@@ -34,7 +34,7 @@ const getKey = (x: number, y: number, tool: number): string => {
 
 const findBestRoute = (cave: number[][], target: string): number => {
   const optimal: Record<string, number> = {};
-  const comparator = (a: QueueItem, b: QueueItem) => (a.time < b.time ? 1 : 0);
+  const comparator = (a: QueueItem, b: QueueItem) => a.time < b.time;
   const queue = new PriorityQueue(comparator);
   queue.push({ time: 0, x: 0, y: 0, tool: 1 });
 
