@@ -8,5 +8,5 @@
       "@utilities/*": ["./utilities/*"]
     }
   },
-  "include": ["./solutions/**/*"]
+  "include": ["./solutions/**/*", "./utilities/**/*"]
 }
