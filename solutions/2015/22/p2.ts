@@ -1,18 +1,18 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import {
-  roundStats,
+  RoundStats,
   parseBoss,
   decreaseTimers,
   castSpells,
 } from './day22.helper';
 
-const simulate = (initialRound: roundStats) => {
-  const queue: roundStats[] = [initialRound];
+const simulate = (initialRound: RoundStats) => {
+  const queue: RoundStats[] = [initialRound];
   let minManaSpent = Number.MAX_VALUE;
 
   while (queue.length) {
-    let stats = queue.pop() as roundStats;
+    let stats = queue.pop() as RoundStats;
 
     // Branch pruning.
     if (stats.manaSpent > minManaSpent) {
@@ -62,5 +62,5 @@ export const day22p2 = (input: string) => {
   });
 };
 
-const input = getPuzzle(__dirname).input; // 1289
-run(() => day22p2(input));
+const input = getPuzzle(__dirname).input;
+run(() => day22p2(input)); // 1289

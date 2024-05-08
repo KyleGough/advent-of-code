@@ -1,4 +1,4 @@
-export interface roundStats {
+export interface RoundStats {
   hp: number;
   mana: number;
   bossHp: number;
@@ -21,7 +21,7 @@ export const parseBoss = (input: string) => {
 };
 
 // Decrease effect timers for shield, poison, and recharge.
-export const decreaseTimers = (stats: roundStats) => {
+export const decreaseTimers = (stats: RoundStats) => {
   if (stats.shield > 0) {
     stats.shield--;
   }
@@ -37,12 +37,12 @@ export const decreaseTimers = (stats: roundStats) => {
   return stats;
 };
 
-const calculateBossDamage = (stats: roundStats, bossDamage: number): number =>
+const calculateBossDamage = (stats: RoundStats, bossDamage: number): number =>
   stats.shield > 0 ? Math.max(1, bossDamage - 7) : bossDamage;
 
 export const castSpells = (
-  queue: roundStats[],
-  stats: roundStats,
+  queue: RoundStats[],
+  stats: RoundStats,
   minManaSpent: number
 ): number => {
   if (magicMissile(queue, stats, minManaSpent)) {
@@ -59,8 +59,8 @@ export const castSpells = (
 };
 
 const magicMissile = (
-  queue: roundStats[],
-  stats: roundStats,
+  queue: RoundStats[],
+  stats: RoundStats,
   minManaSpent: number
 ): boolean => {
   if (stats.mana < 53) return false;
@@ -85,8 +85,8 @@ const magicMissile = (
 };
 
 const drain = (
-  queue: roundStats[],
-  stats: roundStats,
+  queue: RoundStats[],
+  stats: RoundStats,
   minManaSpent: number
 ): boolean => {
   if (stats.mana < 73) return false;
@@ -111,7 +111,7 @@ const drain = (
   return false;
 };
 
-const shield = (queue: roundStats[], stats: roundStats) => {
+const shield = (queue: RoundStats[], stats: RoundStats) => {
   if (stats.mana < 113 || stats.shield !== 0) return;
 
   let nextStats = {
@@ -127,7 +127,7 @@ const shield = (queue: roundStats[], stats: roundStats) => {
   }
 };
 
-const poison = (queue: roundStats[], stats: roundStats) => {
+const poison = (queue: RoundStats[], stats: RoundStats) => {
   if (stats.mana < 173 || stats.poison !== 0) return;
 
   let nextStats = {
@@ -143,7 +143,7 @@ const poison = (queue: roundStats[], stats: roundStats) => {
   }
 };
 
-const recharge = (queue: roundStats[], stats: roundStats) => {
+const recharge = (queue: RoundStats[], stats: RoundStats) => {
   if (stats.mana < 229 || stats.recharge !== 0) return;
 
   let nextStats = {

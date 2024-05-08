@@ -48,5 +48,5 @@ export const day23p2 = (input: string) => {
   return round;
 };
 
-const input = getPuzzle(__dirname).input; // 893
-run(() => day23p2(input));
+const input = getPuzzle(__dirname).input;
+run(() => day23p2(input)); // 893

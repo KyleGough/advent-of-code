@@ -39,7 +39,7 @@ const findBestRoute = (cave: number[][], target: string): number => {
   queue.push({ time: 0, x: 0, y: 0, tool: 1 });
 
   while (queue.size()) {
-    const { time, x, y, tool } = queue.pop() as QueueItem;
+    const { time, x, y, tool } = queue.pop();
     const key = getKey(x, y, tool);
 
     if (optimal[key] && optimal[key] <= time) {

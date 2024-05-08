@@ -47,5 +47,5 @@ export const day23p1 = (input: string) => {
   return emptyTiles;
 };
 
-const input = getPuzzle(__dirname).input; // 3815
-run(() => day23p1(input));
+const input = getPuzzle(__dirname).input;
+run(() => day23p1(input)); // 3815
