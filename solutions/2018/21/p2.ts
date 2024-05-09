@@ -1,9 +1,9 @@
 import { run } from '@utilities/run';
 import { findOverflowCodes } from './day21.helper';
 
-export const day21p1 = () => {
+export const day21p2 = () => {
   const codes = findOverflowCodes();
-  return codes[0];
+  return codes[codes.length - 1];
 };
 
-run(() => day21p1()); // 6778585
+run(() => day21p2()); // 6534225

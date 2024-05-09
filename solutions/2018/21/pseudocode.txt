@@ -1,0 +1,66 @@
+# Simplified instructions
+
+# ip D
+F = 123
+F = F & 456
+F = F === 72 ? 1 : 0
+D = F + D
+D = 0
+F = 0
+C = F | 65536
+F = 10362650
+E = C & 255
+F = F + E
+F = F & 16777215
+F = F * 65899
+F = F & 16777215
+E = C < 256 ? 1 : 0
+D = E + D
+D = D + 1
+D = 27
+E = 0
+B = E + 1
+B = B * 256
+B = B > C ? 1 : 0
+D = D + B
+D = D + 1
+D = 25
+E = E + 1
+D = 17
+C = E
+D = 7
+E = F === A ? 1 : 0
+D = E + D
+D = 5
+
+# Pseudocode
+
+while (true) {
+    c = f | 65536;
+    f = 10362650;
+
+    while (true) {
+      e = c & 255;
+      f = f + e;
+      f = f & 16777215;
+      f = f * 65899;
+      f = f & 16777215;
+
+      if (c >= 256) {
+        e = 0;
+
+        while (true) {
+          b = e + 1;
+          b *= 256;
+          if (b > c) {
+            break;
+          }
+          e = e + 1;
+        }
+
+        c = e;
+      } else {
+        PRINT F
+      }
+    }
+  }
