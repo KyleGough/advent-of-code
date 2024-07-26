@@ -1,5 +1,5 @@
 {
-  "name": "adventofcode-2022",
+  "name": "adventofcode",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -16,11 +16,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KyleGough/adventofcode-2022.git"
+    "url": "git+https://github.com/KyleGough/adventofcode.git"
   },
   "author": "Kyle Gough",
   "license": "MIT",
-  "homepage": "https://github.com/KyleGough/adventofcode-2022#readme",
+  "homepage": "https://github.com/KyleGough/adventofcode#readme",
   "dependencies": {
     "md5": "^2.3.0",
     "path": "^0.12.7",
