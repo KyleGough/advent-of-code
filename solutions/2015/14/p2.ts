@@ -71,5 +71,5 @@ export const day14p2 = (input: string, timeLimit: number) => {
   return reindeerPoints.reduce(max);
 };
 
-const input = getPuzzleWithConfig(__dirname, customConfig).example;
+const input = getPuzzleWithConfig(__dirname, customConfig).input;
 run(() => day14p2(...input)); // 1084

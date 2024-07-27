@@ -35,5 +35,5 @@ export const day12p2 = (input: string) => {
   return count + remGen * diff;
 };
 
-const input = getPuzzle(__dirname).example;
+const input = getPuzzle(__dirname).input;
 run(() => day12p2(input)); // 1000000000508
