@@ -18,3 +18,7 @@ export const transpose = <T>(arr: T[][]): T[][] => {
 
   return transposed;
 };
+
+export const intersection = <T>(arr1: T[], arr2: T[]): T[] => {
+  return arr1.filter((value) => arr2.includes(value));
+};

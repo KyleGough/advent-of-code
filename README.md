@@ -35,8 +35,8 @@ Created by [Eric Wastl](http://was.tl/) | [More information](https://adventofcod
 ## 2020
 
 <div>
-  <img src="https://img.shields.io/badge/Days-20%2F25-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stars-40/50-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Days-21%2F25-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stars-42/50-yellow?style=flat-square" />
 </div>
 
 ## 2018
