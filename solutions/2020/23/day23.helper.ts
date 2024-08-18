@@ -1,60 +1,35 @@
-export interface Cup {
-  value: number;
-  next: Cup;
-}
+import { max, min } from '@utilities/reduce';
 
-export const parseCups = (
-  initialValues: number[],
-  extension: number[] = []
-): Cup => {
-  const values = [...initialValues, ...extension];
-  const start = {
-    value: values[0],
-  } as Cup;
-
-  start.next = start;
-
-  let previous: Cup = start;
+const parseCups = (values: number[]): Record<number, number> => {
+  const cups: Record<number, number> = {};
+  const start = values[0];
+  let previous = start;
 
   for (const value of values.slice(1)) {
-    const next = {
-      value,
-    } as Cup;
-    previous.next = next;
-    previous = next;
+    cups[previous] = value;
+    previous = value;
   }
 
-  previous.next = start;
-  return start;
-};
-
-const getCupRecord = (current: Cup): Record<number, Cup> => {
-  const cupRecord: Record<number, Cup> = {};
-  let searchCurrent = current;
-  const startValue = current.value;
-
-  do {
-    cupRecord[searchCurrent.value] = searchCurrent;
-    searchCurrent = searchCurrent.next;
-  } while (searchCurrent.value !== startValue);
-
-  return cupRecord;
+  cups[previous] = start;
+  return cups;
 };
 
 export const moveCups = (
-  current: Cup,
-  moves: number,
-  minValue: number,
-  maxValue: number
-): Cup => {
-  const cupRecord = getCupRecord(current);
+  values: number[],
+  moves: number
+): Record<number, number> => {
+  const cups = parseCups(values);
+  const minValue = values.reduce(min, Number.MAX_SAFE_INTEGER);
+  const maxValue = values.reduce(max, 0);
+
+  let current = values[0];
 
   for (let i = 0; i < moves; i++) {
-    const pick = current.next;
-    current.next = current.next.next.next.next;
+    const pick = cups[current];
+    cups[current] = cups[cups[cups[pick]]];
 
-    const pickValues = [pick.value, pick.next.value, pick.next.next.value];
-    let destination = current.value;
+    const pickValues = [pick, cups[pick], cups[cups[pick]]];
+    let destination = current;
 
     do {
       destination -= 1;
@@ -63,13 +38,10 @@ export const moveCups = (
       }
     } while (pickValues.includes(destination));
 
-    const insert = cupRecord[destination];
-    pick.next.next.next = insert.next;
-    insert.next = pick;
-    current = current.next;
+    cups[pickValues[2]] = cups[destination];
+    cups[destination] = pick;
+    current = cups[current];
   }
 
-  console.log('adad');
-
-  return cupRecord[1];
+  return cups;
 };

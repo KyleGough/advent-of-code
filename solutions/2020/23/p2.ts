@@ -1,11 +1,10 @@
 import { getPuzzle } from '@utilities/getPuzzle';
-import { max, min } from '@utilities/reduce';
+import { max } from '@utilities/reduce';
 import { run } from '@utilities/run';
-import { moveCups, parseCups } from './day23.helper';
+import { moveCups } from './day23.helper';
 
 export const day23p2 = (input: string) => {
   const values = input.split('').map(Number);
-  const minValue = values.reduce(min, Number.MAX_SAFE_INTEGER);
   const maxValue = values.reduce(max, 0);
 
   const extension = Array.from(
@@ -13,9 +12,8 @@ export const day23p2 = (input: string) => {
     (_, i) => i + maxValue + 1
   );
 
-  const cups = parseCups(values, extension);
-  const current = moveCups(cups, 10_000_000, minValue, 1_000_000);
-  return current.next.value * current.next.next.value;
+  const cups = moveCups([...values, ...extension], 10_000_000);
+  return cups[1] * cups[cups[1]];
 };
 
 const input = getPuzzle(__dirname).input;

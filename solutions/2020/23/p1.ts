@@ -1,24 +1,21 @@
 import { getPuzzle } from '@utilities/getPuzzle';
-import { max, min } from '@utilities/reduce';
 import { run } from '@utilities/run';
-import { moveCups, parseCups } from './day23.helper';
+import { moveCups } from './day23.helper';
 
 export const day23p1 = (input: string) => {
   const values = input.split('').map(Number);
-  const minValue = values.reduce(min, Number.MAX_SAFE_INTEGER);
-  const maxValue = values.reduce(max, 0);
-
-  const cups = parseCups(values);
-  let current = moveCups(cups, 100, minValue, maxValue);
+  const cups = moveCups(values, 100);
 
   const sequence: number[] = [];
 
-  do {
-    sequence.push(current.value);
-    current = current.next;
-  } while (current.value !== 1);
+  let current = cups[1];
 
-  return sequence.slice(1).join('');
+  while (current !== 1) {
+    sequence.push(current);
+    current = cups[current];
+  }
+
+  return sequence.join('');
 };
 
 const input = getPuzzle(__dirname).input;
