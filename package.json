@@ -5,13 +5,6 @@
   "scripts": {
     "watch": "nodemon --exec ts-node -r tsconfig-paths/register",
     "test": "jest",
-    "test:2015": "jest solutions/2015",
-    "test:2016": "jest solutions/2016",
-    "test:2017": "jest solutions/2017",
-    "test:2018": "jest solutions/2018",
-    "test:2020": "jest solutions/2020",
-    "test:2022": "jest solutions/2022",
-    "test:2023": "jest solutions/2023",
     "lint": "eslint ."
   },
   "repository": {
