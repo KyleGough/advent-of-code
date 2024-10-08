@@ -64,6 +64,15 @@ class Line {
   }
 
   getOverlap(other: Line): string[] {
+    if (
+      this.maxX < other.minX ||
+      other.maxX < this.minX ||
+      this.maxY < other.minY ||
+      other.maxY < this.minY
+    ) {
+      return [];
+    }
+
     if (this.type !== 'D' && other.type !== 'D') {
       return this.getOverlapSimple(other);
     }
