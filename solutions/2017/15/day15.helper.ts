@@ -6,7 +6,7 @@ export function* generator(initialValue: number, factor: number, multiple = 1) {
   let value = initialValue;
 
   while (true) {
-    value = (value * factor) % 2147483647;
+    value = (value * factor) % 2_147_483_647;
 
     if (value % multiple === 0) {
       yield value.toString(2).slice(-16);

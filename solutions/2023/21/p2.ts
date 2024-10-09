@@ -6,7 +6,7 @@ import { sum } from '@utilities/reduce';
 export const day21p2 = (input: string) => {
   const grid = input.split('\n').map((i) => i.split(''));
   const start = getStartCoords(grid);
-  const stepGoal = 26501365;
+  const stepGoal = 26_501_365;
 
   const size = grid[0].length;
   const gridSpans = Math.floor(stepGoal / size) - 1;

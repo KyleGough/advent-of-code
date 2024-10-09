@@ -29,9 +29,9 @@ export const day07p2 = (input: string) => {
       output = findValue(value);
     }
 
-    output &= 0xffff;
+    output &= 65535;
     signalMap[id] = output;
-    return output & 0xffff;
+    return output & 65535;
   };
 
   for (let i = 0; i < instructions.length; i++) {

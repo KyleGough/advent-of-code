@@ -4,6 +4,9 @@
     "ecmaVersion": 2022,
     "sourceType": "script"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "unicorn"],
+  "rules": {
+    "unicorn/numeric-separators-style": ["error", {"number": {"minimumDigits": 7, "groupLength": 3}}]
+  },
   "extends": ["plugin:@typescript-eslint/recommended"]
 }

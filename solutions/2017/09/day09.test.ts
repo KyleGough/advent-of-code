@@ -17,7 +17,7 @@ describe('Day 09 Puzzle', () => {
   });
 
   test('Part 1 Input', () => {
-    expect(day09p1(input)).toBe(16_827);
+    expect(day09p1(input)).toBe(16827);
   });
 
   test('Part 2 Example', () => {

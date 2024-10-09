@@ -4,7 +4,7 @@ import { run } from '@utilities/run';
 import { transpose } from '@utilities/array';
 import { Coord, getGalaxyCoords, Universe } from './day11.helper';
 
-const EXPANSION_AMOUNT = 1000000;
+const EXPANSION_AMOUNT = 1_000_000;
 
 export const day11p2 = (input: string) => {
   const grid = input.split('\n').map((i) => i.split('').map((j) => j === '#'));

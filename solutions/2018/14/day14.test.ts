@@ -24,6 +24,6 @@ describe('Day 14 Puzzle', () => {
   });
 
   test('Part 2 Input', () => {
-    expect(day14p2(input)).toBe(20316365);
+    expect(day14p2(input)).toBe(20_316_365);
   });
 });

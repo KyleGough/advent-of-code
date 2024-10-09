@@ -34,7 +34,7 @@ export const day07p1 = (input: string) => {
       output = findValue(value);
     }
 
-    output &= 0xffff;
+    output &= 65535;
     signalMap[id] = output;
     return output;
   };

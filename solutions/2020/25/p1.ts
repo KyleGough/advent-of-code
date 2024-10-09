@@ -12,7 +12,7 @@ const getLoopSize = (subjectNumber: number, publicKey: number): number => {
   let loopSize = 0;
 
   while (value != publicKey) {
-    value = (value * subjectNumber) % 20201227;
+    value = (value * subjectNumber) % 20_201_227;
     loopSize += 1;
   }
 
@@ -23,7 +23,7 @@ const getEncryptionKey = (subjectNumber: number, loopSize: number): number => {
   let value = 1;
 
   for (let i = 0; i < loopSize; i++) {
-    value = (value * subjectNumber) % 20201227;
+    value = (value * subjectNumber) % 20_201_227;
   }
 
   return value;

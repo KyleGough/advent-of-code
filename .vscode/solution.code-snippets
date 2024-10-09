@@ -10,7 +10,7 @@
       "  return input;",
       "};",
       "",
-      "const input = getPuzzle(__dirname).input;",
+      "const input = getPuzzle(__dirname).example;",
       "run(() => day${TM_DIRECTORY/.*\\/([^\\/]+)$/$1/}${TM_FILENAME_BASE}(input)); // TODO",
       ""
     ],

@@ -6,11 +6,11 @@ const { example, input } = getPuzzle(__dirname);
 
 describe('Day 11 Puzzle', () => {
   test('Part 1 Example', () => {
-    expect(day11p1(example)).toBe(10_605);
+    expect(day11p1(example)).toBe(10605);
   });
 
   test('Part 1 Input', () => {
-    expect(day11p1(input)).toBe(55_216);
+    expect(day11p1(input)).toBe(55216);
   });
 
   test('Part 2 Example', () => {

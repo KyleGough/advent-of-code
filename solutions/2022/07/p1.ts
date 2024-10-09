@@ -13,7 +13,7 @@ export const day07p1 = (input: string) => {
       const directorySize = node.children
         .map((child) => calculateDirectorySize(child))
         .reduce(sum);
-      if (directorySize <= 100_000) {
+      if (directorySize <= 100000) {
         sumDirectoryConstraint += directorySize;
       }
       node.filesize = directorySize;

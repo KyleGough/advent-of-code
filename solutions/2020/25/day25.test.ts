@@ -5,10 +5,10 @@ const { example, input } = getPuzzle(__dirname);
 
 describe('Day 25 Puzzle', () => {
   test('Part 1 Example', () => {
-    expect(day25p1(example)).toBe(14897079);
+    expect(day25p1(example)).toBe(14_897_079);
   });
 
   test('Part 1 Input', () => {
-    expect(day25p1(input)).toBe(4441893);
+    expect(day25p1(input)).toBe(4_441_893);
   });
 });

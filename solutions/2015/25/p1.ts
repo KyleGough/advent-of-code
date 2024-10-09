@@ -30,10 +30,10 @@ export const day25p1 = (input: string) => {
 
 const getCode = (col: number, row: number): number => {
   const order = getOrder(col, row);
-  let value = 20151125;
+  let value = 20_151_125;
 
   for (let i = 2; i <= order; i++) {
-    value = (value * 252533) % 33554393;
+    value = (value * 252533) % 33_554_393;
   }
 
   return value;

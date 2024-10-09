@@ -3,7 +3,7 @@ import { run } from '@utilities/run';
 import { getChecksum } from './day16.helper';
 
 export const day16p2 = (input: string) => {
-  const diskSize = 35651584;
+  const diskSize = 35_651_584;
   const checksum = getChecksum(input.split(''), diskSize);
   return checksum;
 };

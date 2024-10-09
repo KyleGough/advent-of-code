@@ -7,11 +7,11 @@ const { example, input } = getPuzzle(__dirname);
 // Tests are skipped for client and CI performance.
 describe('Day 04 Puzzle', () => {
   test.skip('Part 1 Example', () => {
-    expect(day04p1(example)).toBe(609_043);
+    expect(day04p1(example)).toBe(609043);
   });
 
   test.skip('Part 1 Input', () => {
-    expect(day04p1(input)).toBe(282_749);
+    expect(day04p1(input)).toBe(282749);
   });
 
   test.skip('Part 2 Example', () => {

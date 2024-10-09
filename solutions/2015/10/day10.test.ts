@@ -14,10 +14,10 @@ describe('Day 10 Puzzle', () => {
   });
 
   test('Part 2 Example', () => {
-    expect(day10p2(example)).toBe(1166642);
+    expect(day10p2(example)).toBe(1_166_642);
   });
 
   test('Part 2 Input', () => {
-    expect(day10p2(input)).toBe(6989950);
+    expect(day10p2(input)).toBe(6_989_950);
   });
 });

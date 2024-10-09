@@ -6,7 +6,7 @@ const { input } = getPuzzle(__dirname);
 
 describe('Day 02 Puzzle', () => {
   test('Part 1 Input', () => {
-    expect(day02p1(input)).toBe(32_121);
+    expect(day02p1(input)).toBe(32121);
   });
 
   test('Part 2 Input', () => {

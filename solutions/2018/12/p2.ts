@@ -11,7 +11,7 @@ export const day12p2 = (input: string) => {
     ...Array(4).fill(false),
   ];
 
-  const generations = 50000000000;
+  const generations = 50_000_000_000;
   let count = 0;
   let diff = 0;
   let prevCount = 0;
