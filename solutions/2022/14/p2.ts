@@ -1,4 +1,3 @@
-// TODO: Optimise
 import { getPuzzle } from '@utilities/getPuzzle';
 import { Cell, getRockPositions, getMaxDepth } from './day14.helper';
 import { run } from '@utilities/run';

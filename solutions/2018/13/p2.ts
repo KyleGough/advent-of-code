@@ -19,4 +19,4 @@ export const day13p2 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day13p2(input)); // TODO
+run(() => day13p2(input)); // 2,81
