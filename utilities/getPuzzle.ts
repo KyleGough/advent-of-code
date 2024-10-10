@@ -8,22 +8,22 @@ interface PuzzleConfig<T> {
 
 type PuzzleWithConfig<T> = Record<string, [string, T]>;
 
-export const getPuzzle = (dir: string) => {
+export const getPuzzle = (dir: string): Record<string, string> => {
   const exampleTextPath = resolve(dir, 'example.txt');
   const exampleTextPath2 = resolve(dir, 'example2.txt');
+  const exampleTextPath3 = resolve(dir, 'example3.txt');
   const inputTextPath = resolve(dir, 'input.txt');
 
   return {
-    example: existsSync(exampleTextPath)
-      ? readFileSync(exampleTextPath, 'utf-8')
-      : '',
-    example2: existsSync(exampleTextPath2)
-      ? readFileSync(exampleTextPath2, 'utf-8')
-      : '',
-    input: existsSync(inputTextPath)
-      ? readFileSync(inputTextPath, 'utf-8')
-      : '',
+    example: getFile(exampleTextPath),
+    example2: getFile(exampleTextPath2),
+    example3: getFile(exampleTextPath3),
+    input: getFile(inputTextPath),
   };
+};
+
+const getFile = (file: string): string => {
+  return existsSync(file) ? readFileSync(file, 'utf-8') : '';
 };
 
 export const getPuzzleWithConfig = <T>(
