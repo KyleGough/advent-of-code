@@ -1,11 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import {
-  parseCoord,
-  parseFold,
-  performFold,
-  coordToString,
-} from './day13.helper';
+import { parseCoord, parseFold, performFold } from './day13.helper';
 import { max } from '@utilities/reduce';
 
 export const day13p2 = (input: string) => {

@@ -17,7 +17,7 @@ export const day12p2 = (input: string) => {
       continue;
     }
 
-    for (let neighbour of graph[node]) {
+    for (const neighbour of graph[node]) {
       if (isLargeCave(neighbour) || neighbour === 'end') {
         queue.push({
           node: neighbour,

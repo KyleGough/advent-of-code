@@ -6,7 +6,7 @@ export const matchDisjointNumber = (input: string): number => {
   return parseInt([...input.matchAll(/\d/g)].map((i) => i[0]).join(''));
 };
 
-export const countLetters = (input: string): Record<string, number> => {
+export const countChars = (input: string): Record<string, number> => {
   const counts: Record<string, number> = {};
 
   for (let i = 0; i < input.length; i++) {

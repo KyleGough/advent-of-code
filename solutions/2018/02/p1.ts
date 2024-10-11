@@ -1,9 +1,9 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { countLetters } from '@utilities/string';
+import { countChars } from '@utilities/string';
 
 export const day02p1 = (input: string) => {
-  const counts = input.split('\n').map(countLetters);
+  const counts = input.split('\n').map(countChars);
   const doubleCount = counts.filter((i) => containsDuplicate(i, 2)).length;
   const tripleCount = counts.filter((i) => containsDuplicate(i, 3)).length;
   return doubleCount * tripleCount;
