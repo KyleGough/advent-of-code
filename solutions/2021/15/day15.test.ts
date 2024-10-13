@@ -18,6 +18,6 @@ describe('Day 15 Puzzle', () => {
   });
 
   test('Part 2 Input', () => {
-    expect(day15p2(input)).toBe(0);
+    expect(day15p2(input)).toBe(2800);
   });
 });
