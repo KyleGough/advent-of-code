@@ -1,7 +1,7 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { permutations } from '@utilities/permutations';
 import { run } from '@utilities/run';
-import { incodeComputerStep } from '../05/day05.helper';
+import { intcodeComputerStep } from '../05/day05.helper';
 import { modulo } from '@utilities/modulo';
 
 export const day07p2 = (input: string) => {
@@ -18,7 +18,7 @@ export const day07p2 = (input: string) => {
     let thrust = 0;
 
     while (ips[amplifier] < nums.length) {
-      const step = incodeComputerStep(nums, inputs[amplifier], ips[amplifier]);
+      const step = intcodeComputerStep(nums, inputs[amplifier], ips[amplifier]);
 
       if (step.halt) {
         break;

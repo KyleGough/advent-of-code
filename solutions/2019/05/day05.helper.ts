@@ -2,14 +2,16 @@ interface StepOutput {
   ip: number;
   output: number;
   halt: boolean;
+  relativeBase: number;
 }
 
 export const intcodeComputer = (nums: number[], input: number[]): number => {
   let ip = 0;
   let output = 0;
+  let relativeBase = 0;
 
   while (ip < nums.length) {
-    const step = incodeComputerStep(nums, input, ip);
+    const step = intcodeComputerStep(nums, input, ip, relativeBase);
 
     if (step.halt) {
       break;
@@ -17,22 +19,35 @@ export const intcodeComputer = (nums: number[], input: number[]): number => {
 
     output = step.output;
     ip = step.ip;
+    relativeBase = step.relativeBase;
   }
 
   return output;
 };
 
-export const incodeComputerStep = (
+export const intcodeComputerStep = (
   nums: number[],
   input: number[],
-  ip: number
+  ip: number,
+  relativeBase = 0
 ): StepOutput => {
   const getValue = (index: number, mode: string): number => {
-    return nums[getIndex(index, mode)];
+    return nums[getIndex(index, mode)] ?? 0;
   };
 
   const getIndex = (index: number, mode: string): number => {
-    return mode === '0' ? nums[index] : index;
+    if (mode === '0') {
+      // Position mode
+      return nums[index];
+    } else if (mode === '1') {
+      // Immediate mode
+      return index;
+    } else if (mode === '2') {
+      // Relative mode
+      return relativeBase + nums[index];
+    } else {
+      throw Error('Invalid mode');
+    }
   };
 
   while (ip < nums.length) {
@@ -60,9 +75,9 @@ export const incodeComputerStep = (
         break;
       case 4:
         // Output
-        const output = nums[getIndex(ip + 1, c)];
+        const output = getValue(ip + 1, c);
         ip += 2;
-        return { ip, output, halt: false };
+        return { ip, output, halt: false, relativeBase };
       case 5:
         // Jump-if-true
         if (getValue(ip + 1, c) !== 0) {
@@ -97,11 +112,18 @@ export const incodeComputerStep = (
         }
         ip += 4;
         break;
-      default:
+      case 9:
+        // Adjust relative base
+        relativeBase += getValue(ip + 1, c);
+        ip += 2;
+        break;
+      case 99:
         // Halt
-        return { ip, output: 0, halt: true };
+        return { ip, output: 0, halt: true, relativeBase };
+      default:
+        throw Error(`Invalid opcode ${opcode}`);
     }
   }
 
-  return { ip, output: 0, halt: false };
+  return { ip, output: 0, halt: false, relativeBase };
 };
