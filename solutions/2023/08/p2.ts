@@ -1,6 +1,7 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { parseNetwork } from './day08.helper';
+import { lcm } from '@utilities/math';
 
 export const day08p2 = (input: string) => {
   const instructions = input.split('\n\n')[0].split('');
@@ -29,14 +30,6 @@ export const day08p2 = (input: string) => {
   );
 
   return finalLCM;
-};
-
-const gcd = (a: number, b: number): number => {
-  return b === 0 ? a : gcd(b, a % b);
-};
-
-const lcm = (a: number, b: number): number => {
-  return (a * b) / gcd(a, b);
 };
 
 const input = getPuzzle(__dirname).input;
