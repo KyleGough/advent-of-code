@@ -1,11 +1,7 @@
 import { existsSync, readFileSync } from 'fs';
 import { resolve } from 'path';
 
-interface PuzzleConfig<T> {
-  example: T;
-  input: T;
-}
-
+type PuzzleConfig<T> = Record<string, T>;
 type PuzzleWithConfig<T> = Record<string, [string, T]>;
 
 export const getPuzzle = (dir: string): Record<string, string> => {
@@ -33,6 +29,7 @@ export const getPuzzleWithConfig = <T>(
   const puzzles = getPuzzle(dir);
   return {
     example: [puzzles.example, customConfig.example],
+    example2: [puzzles.example2, customConfig.example2],
     input: [puzzles.input, customConfig.input],
   };
 };
