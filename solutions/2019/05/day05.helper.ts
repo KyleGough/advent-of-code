@@ -1,17 +1,17 @@
-interface StepOutput {
+export interface StepOutput {
   ip: number;
   output: number;
   halt: boolean;
-  relativeBase: number;
+  base: number;
 }
 
 export const intcodeComputer = (nums: number[], input: number[]): number => {
   let ip = 0;
   let output = 0;
-  let relativeBase = 0;
+  let base = 0;
 
   while (ip < nums.length) {
-    const step = intcodeComputerStep(nums, input, ip, relativeBase);
+    const step = intcodeComputerStep(nums, input, ip, base);
 
     if (step.halt) {
       break;
@@ -19,7 +19,7 @@ export const intcodeComputer = (nums: number[], input: number[]): number => {
 
     output = step.output;
     ip = step.ip;
-    relativeBase = step.relativeBase;
+    base = step.base;
   }
 
   return output;
@@ -29,7 +29,7 @@ export const intcodeComputerStep = (
   nums: number[],
   input: number[],
   ip: number,
-  relativeBase = 0
+  base = 0
 ): StepOutput => {
   const getValue = (index: number, mode: string): number => {
     return nums[getIndex(index, mode)] ?? 0;
@@ -44,9 +44,9 @@ export const intcodeComputerStep = (
       return index;
     } else if (mode === '2') {
       // Relative mode
-      return relativeBase + nums[index];
+      return base + nums[index];
     } else {
-      throw Error('Invalid mode');
+      throw new Error('Invalid mode');
     }
   };
 
@@ -77,7 +77,7 @@ export const intcodeComputerStep = (
         // Output
         const output = getValue(ip + 1, c);
         ip += 2;
-        return { ip, output, halt: false, relativeBase };
+        return { ip, output, halt: false, base };
       case 5:
         // Jump-if-true
         if (getValue(ip + 1, c) !== 0) {
@@ -114,16 +114,16 @@ export const intcodeComputerStep = (
         break;
       case 9:
         // Adjust relative base
-        relativeBase += getValue(ip + 1, c);
+        base += getValue(ip + 1, c);
         ip += 2;
         break;
       case 99:
         // Halt
-        return { ip, output: 0, halt: true, relativeBase };
+        return { ip, output: 0, halt: true, base };
       default:
-        throw Error(`Invalid opcode ${opcode}`);
+        throw new Error(`Invalid opcode ${opcode}`);
     }
   }
 
-  return { ip, output: 0, halt: false, relativeBase };
+  return { ip, output: 0, halt: false, base };
 };

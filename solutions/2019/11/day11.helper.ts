@@ -22,14 +22,14 @@ export const getRobotPainting = (
 
     // Paint current panel.
     let step = intcodeComputerStep(nums, [panel], ip, base);
-    base = step.relativeBase;
+    base = step.base;
     ip = step.ip;
     halt = step.halt;
     grid[panelId] = step.output;
 
     // Rotate either left or right 90 degrees.
     step = intcodeComputerStep(nums, [], ip, base);
-    base = step.relativeBase;
+    base = step.base;
     ip = step.ip;
     halt = step.halt;
     direction = modulo(direction + (step.output === 0 ? -1 : 1), 4);

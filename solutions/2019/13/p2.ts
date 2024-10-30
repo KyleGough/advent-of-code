@@ -8,17 +8,17 @@ export const day13p2 = (input: string) => {
 };
 
 const playArcade = (nums: number[]): number => {
-  let step = { ip: 0, relativeBase: 0, output: 0, halt: false };
+  let step = { ip: 0, base: 0, output: 0, halt: false };
   let ball = 0;
   let paddle = 0;
   let score = 0;
 
   while (!step.halt) {
-    step = runStepWithJoystick(nums, step.ip, step.relativeBase, ball, paddle);
+    step = runStepWithJoystick(nums, step.ip, step.base, ball, paddle);
     const x = step.output;
-    step = runStepWithJoystick(nums, step.ip, step.relativeBase, ball, paddle);
+    step = runStepWithJoystick(nums, step.ip, step.base, ball, paddle);
     const y = step.output;
-    step = runStepWithJoystick(nums, step.ip, step.relativeBase, ball, paddle);
+    step = runStepWithJoystick(nums, step.ip, step.base, ball, paddle);
     const id = step.output;
 
     if (x === -1 && y === 0) {

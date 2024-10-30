@@ -153,7 +153,7 @@ export class Scanner {
       }
     }
 
-    throw Error('Unable to find overlap between scanners');
+    throw new Error('Unable to find overlap between scanners');
   }
 }
 
