@@ -33,4 +33,4 @@ interface QueueItem {
 }
 
 const input = getPuzzle(__dirname).input;
-run(() => day12p1(input)); // TODO
+run(() => day12p1(input)); // 3421

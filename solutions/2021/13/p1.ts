@@ -16,4 +16,4 @@ export const day13p1 = (input: string) => {
 };
 
 const input = getPuzzle(__dirname).input;
-run(() => day13p1(input)); // TODO
+run(() => day13p1(input)); // 814

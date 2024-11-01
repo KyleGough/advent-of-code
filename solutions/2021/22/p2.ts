@@ -68,15 +68,12 @@ class Cube {
 
   intersects(other: Cube): boolean {
     return !(
-      // TODO check if >= or > for all cases
-      (
-        this.minX >= other.maxX ||
-        this.maxX <= other.minX ||
-        this.minY >= other.maxY ||
-        this.maxY <= other.minY ||
-        this.minZ >= other.maxZ ||
-        this.maxZ <= other.minZ
-      )
+      this.minX >= other.maxX ||
+      this.maxX <= other.minX ||
+      this.minY >= other.maxY ||
+      this.maxY <= other.minY ||
+      this.minZ >= other.maxZ ||
+      this.maxZ <= other.minZ
     );
   }
 
