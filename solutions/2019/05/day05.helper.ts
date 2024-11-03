@@ -55,7 +55,7 @@ export class Intcode {
     }
   }
 
-  runStep = (input: number[]): number[] => {
+  runStep(input: number[]): number[] {
     const { opcode, a, b, c } = this.getInstruction();
 
     switch (opcode) {
@@ -129,9 +129,9 @@ export class Intcode {
     }
 
     return [];
-  };
+  }
 
-  awaitOutput = (input: number[]): number => {
+  awaitOutput(input: number[]): number {
     while (this.ip < this.program.length) {
       const output = this.runStep(input);
       if (output.length) {
@@ -140,5 +140,5 @@ export class Intcode {
     }
 
     return 0;
-  };
+  }
 }
