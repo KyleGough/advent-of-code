@@ -1,6 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { intcodeComputer } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 
 export const day17p2 = (input: string) => {
   const nums = input.split(',').map(Number);
@@ -24,7 +24,7 @@ export const day17p2 = (input: string) => {
 
   const asciiInput = convertToAscii(combinedInput);
 
-  return intcodeComputer([2, ...nums.slice(1)], asciiInput);
+  return new Intcode([2, ...nums.slice(1)]).runProgram(asciiInput);
 };
 
 const convertToAscii = (input: string): number[] => {

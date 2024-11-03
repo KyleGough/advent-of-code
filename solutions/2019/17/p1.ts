@@ -1,7 +1,7 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
 import { sum } from '@utilities/reduce';
-import { intcodeComputerStep, StepOutput } from '../05/day05.helper';
+import { getScaffolding } from './day17.helper';
 
 export const day17p1 = (input: string) => {
   const nums = input.split(',').map(Number);
@@ -14,18 +14,6 @@ interface Coord {
   x: number;
   y: number;
 }
-
-const getScaffolding = (nums: number[]): string => {
-  let step: StepOutput = { ip: 0, base: 0, halt: false, output: 0 };
-  const output = [];
-
-  while (!step.halt) {
-    step = intcodeComputerStep(nums, [], step.ip, step.base);
-    output.push(String.fromCharCode(step.output));
-  }
-
-  return output.join('');
-};
 
 const convolutions: Coord[] = [
   { x: 0, y: 0 },

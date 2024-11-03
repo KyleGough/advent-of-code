@@ -1,10 +1,10 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { intcodeComputer } from './day05.helper';
+import { Intcode } from './day05.helper';
 
 export const day05p2 = (input: string) => {
   const nums = input.split(',').map(Number);
-  return intcodeComputer(nums, [5]);
+  return new Intcode(nums).runProgram([5]);
 };
 
 const input = getPuzzle(__dirname).input;

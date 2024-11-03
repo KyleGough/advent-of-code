@@ -1,9 +1,9 @@
-import { intcodeComputer } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 
 export const isTractorBeam = (
   nums: number[],
   x: number,
   y: number
 ): boolean => {
-  return intcodeComputer([...nums], [x, y]) === 1;
+  return new Intcode([...nums]).runProgram([x, y]) === 1;
 };

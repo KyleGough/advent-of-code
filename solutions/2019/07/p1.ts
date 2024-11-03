@@ -1,7 +1,7 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { permutations } from '@utilities/permutations';
 import { run } from '@utilities/run';
-import { intcodeComputer } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 
 export const day07p1 = (input: string) => {
   const nums = input.split(',').map(Number);
@@ -12,7 +12,7 @@ export const day07p1 = (input: string) => {
     let thrust = 0;
 
     for (let i = 0; i < 5; i++) {
-      thrust = intcodeComputer(nums, [combo[i], thrust]);
+      thrust = new Intcode(nums).runProgram([combo[i], thrust]);
     }
 
     if (thrust > maxThrust) {

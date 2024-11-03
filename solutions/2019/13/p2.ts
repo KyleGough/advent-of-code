@@ -1,6 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import { intcodeComputerStep } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 
 export const day13p2 = (input: string) => {
   const nums = input.split(',').map(Number);
@@ -8,18 +8,15 @@ export const day13p2 = (input: string) => {
 };
 
 const playArcade = (nums: number[]): number => {
-  let step = { ip: 0, base: 0, output: 0, halt: false };
+  const program = new Intcode(nums);
   let ball = 0;
   let paddle = 0;
   let score = 0;
 
-  while (!step.halt) {
-    step = runStepWithJoystick(nums, step.ip, step.base, ball, paddle);
-    const x = step.output;
-    step = runStepWithJoystick(nums, step.ip, step.base, ball, paddle);
-    const y = step.output;
-    step = runStepWithJoystick(nums, step.ip, step.base, ball, paddle);
-    const id = step.output;
+  while (!program.halt) {
+    const x = runStepWithJoystick(program, ball, paddle);
+    const y = runStepWithJoystick(program, ball, paddle);
+    const id = runStepWithJoystick(program, ball, paddle);
 
     if (x === -1 && y === 0) {
       // Update score.
@@ -37,12 +34,10 @@ const playArcade = (nums: number[]): number => {
 };
 
 const runStepWithJoystick = (
-  nums: number[],
-  ip: number,
-  base: number,
+  program: Intcode,
   ball: number,
   paddle: number
-) => {
+): number => {
   let joystick = 0;
 
   if (ball < paddle) {
@@ -51,7 +46,7 @@ const runStepWithJoystick = (
     joystick = 1;
   }
 
-  return intcodeComputerStep(nums, [joystick], ip, base);
+  return program.awaitOutput([joystick]);
 };
 
 const input = getPuzzle(__dirname).input;
