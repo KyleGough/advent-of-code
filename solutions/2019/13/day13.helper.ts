@@ -1,4 +1,4 @@
-import { intcodeComputerStep } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 
 interface Tile {
   x: number;
@@ -7,17 +7,13 @@ interface Tile {
 }
 
 export const getTiles = (nums: number[]): Tile[] => {
-  let step = { ip: 0, base: 0, output: 0, halt: false };
+  const program = new Intcode(nums);
   const tiles: Tile[] = [];
 
-  while (!step.halt) {
-    step = intcodeComputerStep(nums, [], step.ip, step.base);
-    const x = step.output;
-    step = intcodeComputerStep(nums, [], step.ip, step.base);
-    const y = step.output;
-    step = intcodeComputerStep(nums, [], step.ip, step.base);
-    const id = step.output;
-
+  while (!program.halt) {
+    const x = program.awaitOutput([]);
+    const y = program.awaitOutput([]);
+    const id = program.awaitOutput([]);
     tiles.push({ x, y, id });
   }
 

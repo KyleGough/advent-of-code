@@ -1,7 +1,7 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { permutations } from '@utilities/permutations';
 import { run } from '@utilities/run';
-import { intcodeComputerStep } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 import { modulo } from '@utilities/modulo';
 
 export const day07p2 = (input: string) => {
@@ -10,24 +10,25 @@ export const day07p2 = (input: string) => {
   let maxThrust = 0;
 
   for (const combo of combos) {
-    const ips = [0, 0, 0, 0, 0];
+    const programs = Array(5)
+      .fill(0)
+      .map(() => new Intcode(nums));
     const inputs = combo.map((c) => [c]);
     inputs[0].push(0);
 
     let amplifier = 0;
     let thrust = 0;
 
-    while (ips[amplifier] < nums.length) {
-      const step = intcodeComputerStep(nums, inputs[amplifier], ips[amplifier]);
+    while (programs[amplifier].ip < nums.length) {
+      const output = programs[amplifier].awaitOutput(inputs[amplifier]);
 
-      if (step.halt) {
+      if (programs[amplifier].halt) {
         break;
       }
 
-      ips[amplifier] = step.ip;
-      thrust = step.output;
+      thrust = output;
       amplifier = modulo(amplifier + 1, 5);
-      inputs[amplifier].push(step.output);
+      inputs[amplifier].push(output);
     }
 
     if (thrust > maxThrust) {

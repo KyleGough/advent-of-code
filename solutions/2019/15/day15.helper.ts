@@ -1,4 +1,4 @@
-import { intcodeComputerStep, StepOutput } from '../05/day05.helper';
+import { Intcode } from '../05/day05.helper';
 import { Stack } from '@utilities/stack';
 
 export type Coord = `${number},${number}`;
@@ -18,13 +18,15 @@ export const exploreMaze = (nums: number[]): Maze => {
   let previousPos = pos;
   let direction = 0;
   const stack = new Stack<Coord>();
+  const program = new Intcode(nums);
+  let output = 0;
 
-  let step = { ip: 0, base: 0, halt: false, output: 0 };
+  // let step = { ip: 0, base: 0, halt: false, output: 0 };
 
-  while (step.output !== 2) {
+  while (output !== 2) {
     // Scan local area.
     const posHash: Coord = `${pos.x},${pos.y}`;
-    const area = scanArea(nums, pos, grid, step);
+    const area = scanArea(program.program, pos, grid);
     const junction = isJunction(area);
 
     // Mark previous as visited.
@@ -37,7 +39,8 @@ export const exploreMaze = (nums: number[]): Maze => {
 
     previousPos = pos;
     direction = getDirection(area, direction, junctions, pos, stack);
-    step = intcodeComputerStep(nums, [direction], step.ip, step.base);
+
+    output = program.awaitOutput([direction]);
     pos = moveDroid(pos, direction);
   }
 
@@ -61,19 +64,13 @@ export const directions: Position[] = [
 const scanArea = (
   nums: number[],
   pos: Position,
-  grid: Record<Coord, string>,
-  step: StepOutput
+  grid: Record<Coord, string>
 ): string[] => {
   const area = [];
 
   for (let d = 0; d < directions.length; d++) {
     const direction = directions[d];
-    const { output } = intcodeComputerStep(
-      [...nums],
-      [d + 1],
-      step.ip,
-      step.base
-    );
+    const output = new Intcode([...nums]).awaitOutput([d + 1]);
     const x = pos.x + direction.x;
     const y = pos.y + direction.y;
     grid[`${x},${y}`] = outputMap[output];
