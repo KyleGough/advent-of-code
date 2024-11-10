@@ -22,7 +22,8 @@ export const day25p1 = async (input: string) => {
 
   while (!program.halt) {
     console.clear();
-    const promptInput = (await prompt(awaitInput(program))) as string;
+    const textOutput = awaitInput(program);
+    const promptInput = await prompt(textOutput);
     const asciiInput = convertToAscii(`${promptInput}\n`);
     consumeInput(program, asciiInput);
   }
@@ -33,7 +34,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-const prompt = (question: string) => {
+const prompt = (question: string): Promise<string> => {
   return new Promise((resolve) => {
     rl.question(question, (answer) => {
       resolve(answer);
