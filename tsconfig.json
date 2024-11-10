@@ -6,7 +6,8 @@
     "baseUrl": ".",
     "paths": {
       "@utilities/*": ["./utilities/*"]
-    }
+    },
+    "esModuleInterop": true
   },
   "include": ["./solutions/**/*", "./utilities/**/*"]
 }
