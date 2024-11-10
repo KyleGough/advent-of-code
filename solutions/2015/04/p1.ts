@@ -1,6 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import * as md5 from 'md5';
+import md5 from 'md5';
 
 export const day04p1 = (input: string) => {
   let count = 1;

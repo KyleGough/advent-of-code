@@ -1,6 +1,6 @@
 import { getPuzzle } from '@utilities/getPuzzle';
 import { run } from '@utilities/run';
-import * as md5 from 'md5';
+import md5 from 'md5';
 import { VaultState, isOpen } from './day17.helper';
 
 export const day17p2 = (input: string) => {
